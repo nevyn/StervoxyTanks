@@ -1,0 +1,47 @@
+K 25
+svn:wc:ra_dav:version-url
+V 31
+/svn/!svn/ver/69/trunk/CertTest
+END
+AppController.m
+K 25
+svn:wc:ra_dav:version-url
+V 47
+/svn/!svn/ver/59/trunk/CertTest/AppController.m
+END
+main.m
+K 25
+svn:wc:ra_dav:version-url
+V 38
+/svn/!svn/ver/57/trunk/CertTest/main.m
+END
+CertTest_Prefix.pch
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/svn/!svn/ver/57/trunk/CertTest/CertTest_Prefix.pch
+END
+X509Certificate.m
+K 25
+svn:wc:ra_dav:version-url
+V 49
+/svn/!svn/ver/59/trunk/CertTest/X509Certificate.m
+END
+Info.plist
+K 25
+svn:wc:ra_dav:version-url
+V 42
+/svn/!svn/ver/57/trunk/CertTest/Info.plist
+END
+AppController.h
+K 25
+svn:wc:ra_dav:version-url
+V 47
+/svn/!svn/ver/69/trunk/CertTest/AppController.h
+END
+X509Certificate.h
+K 25
+svn:wc:ra_dav:version-url
+V 49
+/svn/!svn/ver/59/trunk/CertTest/X509Certificate.h
+END

@@ -11,6 +11,8 @@
 		05AEA74F1030949A007822B0 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 05AEA7461030949A007822B0 /* MainWindow.xib */; };
 		05AEA7501030949A007822B0 /* StervoxyTanksAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 05AEA7491030949A007822B0 /* StervoxyTanksAppDelegate.m */; };
 		05AEA7511030949A007822B0 /* EAGLView.m in Sources */ = {isa = PBXBuildFile; fileRef = 05AEA74D1030949A007822B0 /* EAGLView.m */; };
+		05AEA76B1030B312007822B0 /* AsyncSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = 05AEA76A1030B312007822B0 /* AsyncSocket.m */; };
+		05AEA7701030B35C007822B0 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 05AEA76F1030B35C007822B0 /* CFNetwork.framework */; };
 		1D60589F0D05DD5A006BFB54 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D30AB110D05D00D00671497 /* Foundation.framework */; };
 		1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DF5F4DF0D08C38300B7A737 /* UIKit.framework */; };
 		28FD15000DC6FC520079059D /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 28FD14FF0DC6FC520079059D /* OpenGLES.framework */; };
@@ -26,6 +28,9 @@
 		05AEA74C1030949A007822B0 /* EAGLView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EAGLView.h; sourceTree = "<group>"; };
 		05AEA74D1030949A007822B0 /* EAGLView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EAGLView.m; sourceTree = "<group>"; };
 		05AEA756103094EA007822B0 /* StervoxyTanks-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "StervoxyTanks-Info.plist"; sourceTree = "<group>"; };
+		05AEA7691030B312007822B0 /* AsyncSocket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AsyncSocket.h; path = Vendor/cocoaasyncsocket/AsyncSocket.h; sourceTree = "<group>"; };
+		05AEA76A1030B312007822B0 /* AsyncSocket.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AsyncSocket.m; path = Vendor/cocoaasyncsocket/AsyncSocket.m; sourceTree = "<group>"; };
+		05AEA76F1030B35C007822B0 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
 		1D30AB110D05D00D00671497 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		1D6058910D05DD3D006BFB54 /* StervoxyTanks.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StervoxyTanks.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1DF5F4DF0D08C38300B7A737 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
@@ -42,6 +47,7 @@
 				1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */,
 				28FD15000DC6FC520079059D /* OpenGLES.framework in Frameworks */,
 				28FD15080DC6FC5B0079059D /* QuartzCore.framework in Frameworks */,
+				05AEA7701030B35C007822B0 /* CFNetwork.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -94,6 +100,15 @@
 			path = Resources;
 			sourceTree = "<group>";
 		};
+		05AEA7601030B308007822B0 /* AsyncSocket */ = {
+			isa = PBXGroup;
+			children = (
+				05AEA7691030B312007822B0 /* AsyncSocket.h */,
+				05AEA76A1030B312007822B0 /* AsyncSocket.m */,
+			);
+			name = AsyncSocket;
+			sourceTree = "<group>";
+		};
 		19C28FACFE9D520D11CA2CBB /* Products */ = {
 			isa = PBXGroup;
 			children = (
@@ -109,6 +124,7 @@
 				05AEA755103094EA007822B0 /* Resources */,
 				29B97323FDCFA39411CA2CEA /* Frameworks */,
 				19C28FACFE9D520D11CA2CBB /* Products */,
+				05AEA76F1030B35C007822B0 /* CFNetwork.framework */,
 			);
 			name = CustomTemplate;
 			sourceTree = "<group>";
@@ -116,6 +132,7 @@
 		29B97323FDCFA39411CA2CEA /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				05AEA7601030B308007822B0 /* AsyncSocket */,
 				28FD15070DC6FC5B0079059D /* QuartzCore.framework */,
 				28FD14FF0DC6FC520079059D /* OpenGLES.framework */,
 				1DF5F4DF0D08C38300B7A737 /* UIKit.framework */,
@@ -180,6 +197,7 @@
 				05AEA74E1030949A007822B0 /* main.m in Sources */,
 				05AEA7501030949A007822B0 /* StervoxyTanksAppDelegate.m in Sources */,
 				05AEA7511030949A007822B0 /* EAGLView.m in Sources */,
+				05AEA76B1030B312007822B0 /* AsyncSocket.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -1,0 +1,41 @@
+K 25
+svn:wc:ra_dav:version-url
+V 33
+/svn/!svn/ver/78/trunk/EchoServer
+END
+AppController.m
+K 25
+svn:wc:ra_dav:version-url
+V 49
+/svn/!svn/ver/78/trunk/EchoServer/AppController.m
+END
+main.m
+K 25
+svn:wc:ra_dav:version-url
+V 40
+/svn/!svn/ver/35/trunk/EchoServer/main.m
+END
+Instructions.txt
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/svn/!svn/ver/69/trunk/EchoServer/Instructions.txt
+END
+Info.plist
+K 25
+svn:wc:ra_dav:version-url
+V 44
+/svn/!svn/ver/35/trunk/EchoServer/Info.plist
+END
+AppController.h
+K 25
+svn:wc:ra_dav:version-url
+V 49
+/svn/!svn/ver/35/trunk/EchoServer/AppController.h
+END
+EchoServer_Prefix.pch
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/svn/!svn/ver/35/trunk/EchoServer/EchoServer_Prefix.pch
+END
