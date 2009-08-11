@@ -22,7 +22,9 @@
     [super viewDidLoad];
 		gameView.animationInterval = 1./60.;
 		[gameView startAnimation];
+
 }
+
 
 - (void)dealloc {
 	NSLog(@"Dealloc game controller");
@@ -30,22 +32,19 @@
 	[super dealloc];
 }
 
-- (void)didReceiveMemoryWarning {
-	// Releases the view if it doesn't have a superview.
-    [super didReceiveMemoryWarning];
-	
-	// Release any cached data, images, etc that aren't in use.
-}
-
 - (void)viewDidUnload {
 	// Release any retained subviews of the main view.
 	self.gameView = nil;
 }
 
--(void)viewDidDisappear:(BOOL)animated;
+- (void)viewDidAppear:(BOOL)animated;
+{
+    self.navigationController.navigationBarHidden = YES;
+}
+- (void)viewDidDissapear:(BOOL)animated;
 {
 	[self.gameView stopAnimation];
+	self.navigationController.navigationBarHidden = NO;
 }
-
 
 @end

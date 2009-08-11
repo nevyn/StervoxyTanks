@@ -9,8 +9,12 @@
 #import <Foundation/Foundation.h>
 #import "EAGLView.h"
 
-@interface GameView : EAGLView {
+#import "Tank.h"
+#import "Level.h"
 
+@interface GameView : EAGLView {
+  Tank *tank;
+  Level *level;
 }
 
 @end

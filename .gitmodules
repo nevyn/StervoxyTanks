@@ -1,0 +1,3 @@
+[submodule "Vendor/CPChipmunk"]
+	path = Vendor/CPChipmunk
+	url = git://github.com/Voxar/CPChipmunk.git

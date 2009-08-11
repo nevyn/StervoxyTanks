@@ -25,7 +25,10 @@
 			[BlockAction actionNamed:@"Singleplayer" block:^(BlockAction *w, ActionTableController *c) {
 				[c.navigationController pushViewController:[[GameController new] autorelease] animated:YES];
 			}],
-			[BlockAction actionNamed:@"Multiplayer" block:^(BlockAction *w, ActionTableController *c) {
+			[BlockAction actionNamed:@"Host game" block:^(BlockAction *w, ActionTableController *c) {
+				NSLog(@"Woah");
+			}],
+			[BlockAction actionNamed:@"Join game" block:^(BlockAction *w, ActionTableController *c) {
 				NSLog(@"Woah");
 			}]
 		)]
