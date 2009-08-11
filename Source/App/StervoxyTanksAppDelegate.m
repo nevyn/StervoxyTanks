@@ -11,29 +11,24 @@
 
 @implementation StervoxyTanksAppDelegate
 
-@synthesize window;
-@synthesize glView;
+@synthesize window, nav;
 
 - (void)applicationDidFinishLaunching:(UIApplication *)application {
-    
-	glView.animationInterval = 1.0 / 60.0;
-	[glView startAnimation];
+	[window addSubview:nav.view];
 }
 
 
 - (void)applicationWillResignActive:(UIApplication *)application {
-	glView.animationInterval = 1.0 / 5.0;
 }
 
 
 - (void)applicationDidBecomeActive:(UIApplication *)application {
-	glView.animationInterval = 1.0 / 60.0;
 }
 
 
 - (void)dealloc {
 	[window release];
-	[glView release];
+	[nav release];
 	[super dealloc];
 }
 

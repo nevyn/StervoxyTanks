@@ -12,11 +12,11 @@
 
 @interface StervoxyTanksAppDelegate : NSObject <UIApplicationDelegate> {
     UIWindow *window;
-    EAGLView *glView;
+    UINavigationController *nav;
 }
 
 @property (nonatomic, retain) IBOutlet UIWindow *window;
-@property (nonatomic, retain) IBOutlet EAGLView *glView;
+@property (nonatomic, retain) IBOutlet UINavigationController *nav;
 
 @end
 

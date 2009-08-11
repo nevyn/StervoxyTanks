@@ -13,6 +13,18 @@
 		05AEA7511030949A007822B0 /* EAGLView.m in Sources */ = {isa = PBXBuildFile; fileRef = 05AEA74D1030949A007822B0 /* EAGLView.m */; };
 		05AEA76B1030B312007822B0 /* AsyncSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = 05AEA76A1030B312007822B0 /* AsyncSocket.m */; };
 		05AEA7701030B35C007822B0 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 05AEA76F1030B35C007822B0 /* CFNetwork.framework */; };
+		05AEA77A1030B5A3007822B0 /* MainMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = 05AEA7791030B5A3007822B0 /* MainMenu.m */; };
+		05AEA77C1030B5CA007822B0 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 05AEA77B1030B5CA007822B0 /* MainMenu.xib */; };
+		05AEA7821030B621007822B0 /* ActionTableController.m in Sources */ = {isa = PBXBuildFile; fileRef = 05AEA7811030B621007822B0 /* ActionTableController.m */; };
+		05AEA7B91030B870007822B0 /* CollectionUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 05AEA7B21030B870007822B0 /* CollectionUtils.m */; };
+		05AEA7BA1030B870007822B0 /* ExceptionUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 05AEA7B41030B870007822B0 /* ExceptionUtils.m */; };
+		05AEA7BB1030B870007822B0 /* Logging.m in Sources */ = {isa = PBXBuildFile; fileRef = 05AEA7B61030B870007822B0 /* Logging.m */; };
+		05AEA7BC1030B870007822B0 /* Test.m in Sources */ = {isa = PBXBuildFile; fileRef = 05AEA7B81030B870007822B0 /* Test.m */; };
+		05AEA7CF1030B8C9007822B0 /* PLBlocks.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 05AEA7CE1030B8C9007822B0 /* PLBlocks.framework */; };
+		05AEA81A1030BB39007822B0 /* GameController.m in Sources */ = {isa = PBXBuildFile; fileRef = 05AEA8191030BB39007822B0 /* GameController.m */; };
+		05AEA8271030BB6E007822B0 /* GameView.m in Sources */ = {isa = PBXBuildFile; fileRef = 05AEA8261030BB6E007822B0 /* GameView.m */; };
+		05AEA82D1030BCA3007822B0 /* GameController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 05AEA82C1030BCA3007822B0 /* GameController.xib */; };
+		05AEA84F1030BE40007822B0 /* GameKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 05AEA84E1030BE40007822B0 /* GameKit.framework */; };
 		1D60589F0D05DD5A006BFB54 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D30AB110D05D00D00671497 /* Foundation.framework */; };
 		1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DF5F4DF0D08C38300B7A737 /* UIKit.framework */; };
 		28FD15000DC6FC520079059D /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 28FD14FF0DC6FC520079059D /* OpenGLES.framework */; };
@@ -31,6 +43,26 @@
 		05AEA7691030B312007822B0 /* AsyncSocket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AsyncSocket.h; path = Vendor/cocoaasyncsocket/AsyncSocket.h; sourceTree = "<group>"; };
 		05AEA76A1030B312007822B0 /* AsyncSocket.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AsyncSocket.m; path = Vendor/cocoaasyncsocket/AsyncSocket.m; sourceTree = "<group>"; };
 		05AEA76F1030B35C007822B0 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		05AEA7781030B5A3007822B0 /* MainMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainMenu.h; sourceTree = "<group>"; };
+		05AEA7791030B5A3007822B0 /* MainMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainMenu.m; sourceTree = "<group>"; };
+		05AEA77B1030B5CA007822B0 /* MainMenu.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainMenu.xib; sourceTree = "<group>"; };
+		05AEA7801030B621007822B0 /* ActionTableController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ActionTableController.h; sourceTree = "<group>"; };
+		05AEA7811030B621007822B0 /* ActionTableController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ActionTableController.m; sourceTree = "<group>"; };
+		05AEA7B11030B870007822B0 /* CollectionUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CollectionUtils.h; sourceTree = "<group>"; };
+		05AEA7B21030B870007822B0 /* CollectionUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CollectionUtils.m; sourceTree = "<group>"; };
+		05AEA7B31030B870007822B0 /* ExceptionUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExceptionUtils.h; sourceTree = "<group>"; };
+		05AEA7B41030B870007822B0 /* ExceptionUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ExceptionUtils.m; sourceTree = "<group>"; };
+		05AEA7B51030B870007822B0 /* Logging.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Logging.h; sourceTree = "<group>"; };
+		05AEA7B61030B870007822B0 /* Logging.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Logging.m; sourceTree = "<group>"; };
+		05AEA7B71030B870007822B0 /* Test.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Test.h; sourceTree = "<group>"; };
+		05AEA7B81030B870007822B0 /* Test.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Test.m; sourceTree = "<group>"; };
+		05AEA7CE1030B8C9007822B0 /* PLBlocks.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PLBlocks.framework; path = "Vendor/plblocks/iPhone Runtime/PLBlocks.framework"; sourceTree = "<group>"; };
+		05AEA8181030BB39007822B0 /* GameController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameController.h; sourceTree = "<group>"; };
+		05AEA8191030BB39007822B0 /* GameController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameController.m; sourceTree = "<group>"; };
+		05AEA8251030BB6E007822B0 /* GameView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameView.h; sourceTree = "<group>"; };
+		05AEA8261030BB6E007822B0 /* GameView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameView.m; sourceTree = "<group>"; };
+		05AEA82C1030BCA3007822B0 /* GameController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GameController.xib; sourceTree = "<group>"; };
+		05AEA84E1030BE40007822B0 /* GameKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GameKit.framework; path = System/Library/Frameworks/GameKit.framework; sourceTree = SDKROOT; };
 		1D30AB110D05D00D00671497 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		1D6058910D05DD3D006BFB54 /* StervoxyTanks.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StervoxyTanks.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1DF5F4DF0D08C38300B7A737 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
@@ -48,6 +80,8 @@
 				28FD15000DC6FC520079059D /* OpenGLES.framework in Frameworks */,
 				28FD15080DC6FC5B0079059D /* QuartzCore.framework in Frameworks */,
 				05AEA7701030B35C007822B0 /* CFNetwork.framework in Frameworks */,
+				05AEA7CF1030B8C9007822B0 /* PLBlocks.framework in Frameworks */,
+				05AEA84F1030BE40007822B0 /* GameKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -59,6 +93,8 @@
 			children = (
 				05AEA7441030949A007822B0 /* App */,
 				05AEA74A1030949A007822B0 /* Model */,
+				05AEA7831030B63C007822B0 /* Network */,
+				05AEA77F1030B621007822B0 /* TouchUtil */,
 				05AEA74B1030949A007822B0 /* View */,
 			);
 			path = Source;
@@ -72,6 +108,9 @@
 				05AEA7471030949A007822B0 /* StervoxyTanks_Prefix.pch */,
 				05AEA7481030949A007822B0 /* StervoxyTanksAppDelegate.h */,
 				05AEA7491030949A007822B0 /* StervoxyTanksAppDelegate.m */,
+				05AEA7781030B5A3007822B0 /* MainMenu.h */,
+				05AEA7791030B5A3007822B0 /* MainMenu.m */,
+				05AEA77B1030B5CA007822B0 /* MainMenu.xib */,
 			);
 			path = App;
 			sourceTree = "<group>";
@@ -88,6 +127,11 @@
 			children = (
 				05AEA74C1030949A007822B0 /* EAGLView.h */,
 				05AEA74D1030949A007822B0 /* EAGLView.m */,
+				05AEA8181030BB39007822B0 /* GameController.h */,
+				05AEA8191030BB39007822B0 /* GameController.m */,
+				05AEA82C1030BCA3007822B0 /* GameController.xib */,
+				05AEA8251030BB6E007822B0 /* GameView.h */,
+				05AEA8261030BB6E007822B0 /* GameView.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -109,6 +153,38 @@
 			name = AsyncSocket;
 			sourceTree = "<group>";
 		};
+		05AEA77F1030B621007822B0 /* TouchUtil */ = {
+			isa = PBXGroup;
+			children = (
+				05AEA7811030B621007822B0 /* ActionTableController.m */,
+				05AEA7801030B621007822B0 /* ActionTableController.h */,
+			);
+			path = TouchUtil;
+			sourceTree = "<group>";
+		};
+		05AEA7831030B63C007822B0 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		05AEA7B01030B870007822B0 /* JAUtil */ = {
+			isa = PBXGroup;
+			children = (
+				05AEA7B11030B870007822B0 /* CollectionUtils.h */,
+				05AEA7B21030B870007822B0 /* CollectionUtils.m */,
+				05AEA7B31030B870007822B0 /* ExceptionUtils.h */,
+				05AEA7B41030B870007822B0 /* ExceptionUtils.m */,
+				05AEA7B51030B870007822B0 /* Logging.h */,
+				05AEA7B61030B870007822B0 /* Logging.m */,
+				05AEA7B71030B870007822B0 /* Test.h */,
+				05AEA7B81030B870007822B0 /* Test.m */,
+			);
+			name = JAUtil;
+			path = Vendor/JAUtil;
+			sourceTree = "<group>";
+		};
 		19C28FACFE9D520D11CA2CBB /* Products */ = {
 			isa = PBXGroup;
 			children = (
@@ -125,6 +201,7 @@
 				29B97323FDCFA39411CA2CEA /* Frameworks */,
 				19C28FACFE9D520D11CA2CBB /* Products */,
 				05AEA76F1030B35C007822B0 /* CFNetwork.framework */,
+				05AEA84E1030BE40007822B0 /* GameKit.framework */,
 			);
 			name = CustomTemplate;
 			sourceTree = "<group>";
@@ -133,10 +210,12 @@
 			isa = PBXGroup;
 			children = (
 				05AEA7601030B308007822B0 /* AsyncSocket */,
+				05AEA7B01030B870007822B0 /* JAUtil */,
 				28FD15070DC6FC5B0079059D /* QuartzCore.framework */,
 				28FD14FF0DC6FC520079059D /* OpenGLES.framework */,
 				1DF5F4DF0D08C38300B7A737 /* UIKit.framework */,
 				1D30AB110D05D00D00671497 /* Foundation.framework */,
+				05AEA7CE1030B8C9007822B0 /* PLBlocks.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -184,6 +263,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				05AEA74F1030949A007822B0 /* MainWindow.xib in Resources */,
+				05AEA77C1030B5CA007822B0 /* MainMenu.xib in Resources */,
+				05AEA82D1030BCA3007822B0 /* GameController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -198,6 +279,14 @@
 				05AEA7501030949A007822B0 /* StervoxyTanksAppDelegate.m in Sources */,
 				05AEA7511030949A007822B0 /* EAGLView.m in Sources */,
 				05AEA76B1030B312007822B0 /* AsyncSocket.m in Sources */,
+				05AEA77A1030B5A3007822B0 /* MainMenu.m in Sources */,
+				05AEA7821030B621007822B0 /* ActionTableController.m in Sources */,
+				05AEA7B91030B870007822B0 /* CollectionUtils.m in Sources */,
+				05AEA7BA1030B870007822B0 /* ExceptionUtils.m in Sources */,
+				05AEA7BB1030B870007822B0 /* Logging.m in Sources */,
+				05AEA7BC1030B870007822B0 /* Test.m in Sources */,
+				05AEA81A1030BB39007822B0 /* GameController.m in Sources */,
+				05AEA8271030BB6E007822B0 /* GameView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -209,11 +298,16 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				COPY_PHASE_STRIP = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/Vendor/plblocks/iPhone Runtime\"",
+				);
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = Source/App/StervoxyTanks_Prefix.pch;
 				"GCC_THUMB_SUPPORT[arch=armv6]" = "";
+				GCC_VERSION = coop.plausible.blocks.compilers.gcc.4_2;
 				INFOPLIST_FILE = "Resources/StervoxyTanks-Info.plist";
 				PRODUCT_NAME = StervoxyTanks;
 			};
@@ -224,9 +318,14 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				COPY_PHASE_STRIP = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/Vendor/plblocks/iPhone Runtime\"",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = Source/App/StervoxyTanks_Prefix.pch;
 				"GCC_THUMB_SUPPORT[arch=armv6]" = "";
+				GCC_VERSION = coop.plausible.blocks.compilers.gcc.4_2;
 				INFOPLIST_FILE = "Resources/StervoxyTanks-Info.plist";
 				PRODUCT_NAME = StervoxyTanks;
 			};
