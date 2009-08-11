@@ -92,9 +92,9 @@
 	[super dealloc];
 }
 
-
-- (void)drawView {
-	
+-(void)draw;
+{
+  
 	// Replace the implementation of this method to do your own custom drawing
 	
 	const GLfloat squareVertices[] = {
@@ -110,15 +110,7 @@
 		255,   0, 255, 255,
 	};
 	
-	[EAGLContext setCurrentContext:context];
-	
-	glBindFramebufferOES(GL_FRAMEBUFFER_OES, viewFramebuffer);
-	glViewport(0, 0, backingWidth, backingHeight);
-	
-	glMatrixMode(GL_PROJECTION);
-	glLoadIdentity();
-	glOrthof(-1.0f, 1.0f, -1.5f, 1.5f, -1.0f, 1.0f);
-	glMatrixMode(GL_MODELVIEW);
+
 	glRotatef(3.0f, 0.0f, 0.0f, 1.0f);
 	
 	glClearColor(0.5f, 0.5f, 0.5f, 1.0f);
@@ -131,6 +123,23 @@
 	
 	glDrawArrays(GL_TRIANGLE_STRIP, 0, 4);
 	
+}
+
+
+- (void)drawView {
+  [EAGLContext setCurrentContext:context];
+	glBindFramebufferOES(GL_FRAMEBUFFER_OES, viewFramebuffer);
+  
+  glViewport(0, 0, backingWidth, backingHeight);
+	
+	glMatrixMode(GL_PROJECTION);
+	glLoadIdentity();
+	glOrthof(-1.0f, 1.0f, -1.5f, 1.5f, -1.0f, 1.0f);
+	glMatrixMode(GL_MODELVIEW);
+  
+  
+  [self draw];
+  
 	glBindRenderbufferOES(GL_RENDERBUFFER_OES, viewRenderbuffer);
 	[context presentRenderbuffer:GL_RENDERBUFFER_OES];
 }
