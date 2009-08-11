@@ -40,7 +40,10 @@
 
 -(void)draw;
 {
+  glPushMatrix();
+  glTranslatef(-targetRect.size.width/2.0, -targetRect.size.height/2.0, 0);
   [texture drawInRect:targetRect];
+  glPopMatrix();
 }
 
 -(void)addToSpace:(CPSpace*)space;

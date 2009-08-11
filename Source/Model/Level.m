@@ -61,7 +61,7 @@
 -(void)loadLevel:(int)levelNumber;
 {
   float width = 1;
-  float height = 1;
+  float height = 1.5;
   //some walls
   [self wallFrom:cpv(-width, -height) to:cpv(-width, height)]; //left
   [self wallFrom:cpv(width, -height) to:cpv(width, height)]; //right
@@ -69,7 +69,7 @@
   [self wallFrom:cpv(-width, -height) to:cpv(width, -height)]; //bottom
   
   
-  Box *box = [[Box alloc] initWithRect:CGRectMake(-0, 0, 0.2, 0.2)];
+  Box *box = [[Box alloc] initWithRect:CGRectMake(-0.5, -0.5, 0.2, 0.2)];
   [box addToSpace:space];
   [bullets addObject:box];
   [box release];
