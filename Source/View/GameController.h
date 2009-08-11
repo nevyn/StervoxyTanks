@@ -10,7 +10,7 @@
 #import "GameView.h"
 
 @interface GameController : UIViewController {
-	IBOutlet GameView *gameView;
+	GameView *gameView;
 }
-
+@property (nonatomic, retain) IBOutlet GameView *gameView;
 @end

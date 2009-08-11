@@ -10,6 +10,7 @@
 
 
 @implementation GameController
+@synthesize gameView;
 -(id)init;
 {
 	return [super initWithNibName:@"GameController" bundle:nil];
@@ -23,14 +24,11 @@
 		[gameView startAnimation];
 }
 
-
-/*
-// Override to allow orientations other than the default portrait orientation.
-- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {
-    // Return YES for supported orientations
-    return (interfaceOrientation == UIInterfaceOrientationPortrait);
+- (void)dealloc {
+	NSLog(@"Dealloc game controller");
+	self.gameView = nil;
+	[super dealloc];
 }
-*/
 
 - (void)didReceiveMemoryWarning {
 	// Releases the view if it doesn't have a superview.
@@ -41,13 +39,12 @@
 
 - (void)viewDidUnload {
 	// Release any retained subviews of the main view.
-	// e.g. self.myOutlet = nil;
+	self.gameView = nil;
 }
 
-
-- (void)dealloc {
-	[gameView release];
-	[super dealloc];
+-(void)viewDidDisappear:(BOOL)animated;
+{
+	[self.gameView stopAnimation];
 }
 
 

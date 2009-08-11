@@ -78,6 +78,21 @@
 }
 
 
+- (void)dealloc {
+	
+	[self stopAnimation];
+	
+	if ([EAGLContext currentContext] == context) {
+		[EAGLContext setCurrentContext:nil];
+	}
+	
+	NSLog(@"view dealloc");
+	
+	[context release];  
+	[super dealloc];
+}
+
+
 - (void)drawView {
 	
 	// Replace the implementation of this method to do your own custom drawing
@@ -198,16 +213,5 @@
 }
 
 
-- (void)dealloc {
-	
-	[self stopAnimation];
-	
-	if ([EAGLContext currentContext] == context) {
-		[EAGLContext setCurrentContext:nil];
-	}
-	
-	[context release];  
-	[super dealloc];
-}
 
 @end
