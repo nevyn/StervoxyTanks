@@ -64,6 +64,9 @@
 		2163841F1031A6AE0008D39F /* tank.png in Resources */ = {isa = PBXBuildFile; fileRef = 2163841E1031A6AE0008D39F /* tank.png */; };
 		216384331031AC770008D39F /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 216384321031AC770008D39F /* CoreGraphics.framework */; };
 		216385C11031C1590008D39F /* Level.m in Sources */ = {isa = PBXBuildFile; fileRef = 216385C01031C1590008D39F /* Level.m */; };
+		21638744103213630008D39F /* Bullet.m in Sources */ = {isa = PBXBuildFile; fileRef = 21638743103213630008D39F /* Bullet.m */; };
+		21638750103214E30008D39F /* bullet.png in Resources */ = {isa = PBXBuildFile; fileRef = 2163874F103214E30008D39F /* bullet.png */; };
+		216387701032186F0008D39F /* PhysicalObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 2163876F1032186F0008D39F /* PhysicalObject.m */; };
 		28FD15000DC6FC520079059D /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 28FD14FF0DC6FC520079059D /* OpenGLES.framework */; };
 		28FD15080DC6FC5B0079059D /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 28FD15070DC6FC5B0079059D /* QuartzCore.framework */; };
 /* End PBXBuildFile section */
@@ -175,6 +178,11 @@
 		216384321031AC770008D39F /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		216385BF1031C1590008D39F /* Level.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Level.h; sourceTree = "<group>"; };
 		216385C01031C1590008D39F /* Level.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Level.m; sourceTree = "<group>"; };
+		21638742103213630008D39F /* Bullet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Bullet.h; sourceTree = "<group>"; };
+		21638743103213630008D39F /* Bullet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Bullet.m; sourceTree = "<group>"; };
+		2163874F103214E30008D39F /* bullet.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bullet.png; sourceTree = "<group>"; };
+		2163876E1032186F0008D39F /* PhysicalObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhysicalObject.h; sourceTree = "<group>"; };
+		2163876F1032186F0008D39F /* PhysicalObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhysicalObject.m; sourceTree = "<group>"; };
 		28FD14FF0DC6FC520079059D /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
 		28FD15070DC6FC5B0079059D /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
@@ -234,6 +242,10 @@
 				216384191031A5E10008D39F /* Tank.m */,
 				216385BF1031C1590008D39F /* Level.h */,
 				216385C01031C1590008D39F /* Level.m */,
+				21638742103213630008D39F /* Bullet.h */,
+				21638743103213630008D39F /* Bullet.m */,
+				2163876E1032186F0008D39F /* PhysicalObject.h */,
+				2163876F1032186F0008D39F /* PhysicalObject.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -257,6 +269,7 @@
 		05AEA755103094EA007822B0 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				2163874F103214E30008D39F /* bullet.png */,
 				2163841E1031A6AE0008D39F /* tank.png */,
 				05AEA756103094EA007822B0 /* StervoxyTanks-Info.plist */,
 			);
@@ -477,6 +490,7 @@
 				216384001031A5B80008D39F /* CMakeLists.txt in Resources */,
 				216384171031A5B80008D39F /* SConscript in Resources */,
 				2163841F1031A6AE0008D39F /* tank.png in Resources */,
+				21638750103214E30008D39F /* bullet.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -531,6 +545,8 @@
 				2163841A1031A5E10008D39F /* Tank.m in Sources */,
 				2163841D1031A6800008D39F /* Texture2D.m in Sources */,
 				216385C11031C1590008D39F /* Level.m in Sources */,
+				21638744103213630008D39F /* Bullet.m in Sources */,
+				216387701032186F0008D39F /* PhysicalObject.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

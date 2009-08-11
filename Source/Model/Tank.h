@@ -9,19 +9,17 @@
 #import <Foundation/Foundation.h>
 #import "Texture2D.h"
 #import "CPChipmunk.h"
+#import "PhysicalObject.h"
 
-@interface Tank : NSObject <UIAccelerometerDelegate> {
-  Texture2D *texture;
-  CPBody *body;
-  CPShape *shape;
+@interface Tank : PhysicalObject <UIAccelerometerDelegate> {
   
   BOOL hasAccelerometer;
+  BOOL collidedLastFrame;
 }
-
--(id)initWithSpace:(CPSpace*)space;
 
 - (void)accelerometer:(UIAccelerometer *)accelerometer didAccelerate:(UIAcceleration *)acceleration;
 
 -(void)draw;
+
 
 @end

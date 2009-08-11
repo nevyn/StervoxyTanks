@@ -19,6 +19,8 @@
   CPSpace *space;
   
   Tank *tank;
+  
+  NSMutableArray *bullets;
 }
 
 @property (readonly, nonatomic) Tank *tank;
