@@ -21,8 +21,18 @@
     [super viewDidLoad];
 		gameView.animationInterval = 1./60.;
 		[gameView startAnimation];
+
 }
 
+- (void)viewDidAppear:(BOOL)animated;
+{
+    self.navigationController.navigationBarHidden = YES;
+}
+
+- (void)viewDidDissapear:(BOOL)animated;
+{
+    self.navigationController.navigationBarHidden = NO;
+}
 
 /*
 // Override to allow orientations other than the default portrait orientation.
