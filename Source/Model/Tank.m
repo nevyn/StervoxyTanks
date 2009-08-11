@@ -7,7 +7,12 @@
 //
 
 #import "Tank.h"
-
+#import "TCFakeAccelerometer.h"
+//#ifdef TARGET_IPHONE_SIMULATOR
+//#	define TankAccelerometer TCFakeAccelerometer
+//#else
+#	define TankAccelerometer UIAccelerometer
+//#endif
 
 @implementation Tank
 
@@ -27,8 +32,8 @@
   
   hasAccelerometer = NO;
   
-  [UIAccelerometer sharedAccelerometer].delegate = self;
-  [UIAccelerometer sharedAccelerometer].updateInterval = 0.1;
+  [TankAccelerometer sharedAccelerometer].delegate = self;
+  [TankAccelerometer sharedAccelerometer].updateInterval = 0.1;
   
   return self;
 }
@@ -69,14 +74,15 @@
   body.velocity = vel;
   //[body applyForce:f atOffset:cpvzero];
   
-  NSLog(@"angle: %.3f tilt: %.3f turn: %.3f", angle, tiltangle);
+  //NSLog(@"angle: %.3f tilt: %.3f turn: %.3f", angle, tiltangle);
 }
 
 - (void)accelerometer:(UIAccelerometer *)accelerometer didAccelerate:(UIAcceleration *)acceleration;
 {
   float x = acceleration.x; //-left     +right
   float y = acceleration.y; //+forward  -backward
-  float z = acceleration.z; //+front    -back
+  //float z = acceleration.z; //+front    -back
+	NSLog(@"%f %f", x, y);
   [self handleAccelerometerChangeX:x y:y];
   hasAccelerometer = YES;
 }
