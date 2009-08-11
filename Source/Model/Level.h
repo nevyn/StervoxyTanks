@@ -19,6 +19,10 @@
   CPSpace *space;
   
   Tank *tank;
+  
+  NSMutableArray *bullets;
+  
+  BOOL somethingCollided;
 }
 
 @property (readonly, nonatomic) Tank *tank;
@@ -30,5 +34,7 @@
 -(void)draw;
 
 -(void)loadLevel:(int)levelNumber;
+
+-(void)shootAt:(CGPoint)point;
 
 @end

@@ -7,6 +7,7 @@
 //
 
 #import "Tank.h"
+
 #import "TCFakeAccelerometer.h"
 //#ifdef TARGET_IPHONE_SIMULATOR
 //#	define TankAccelerometer TCFakeAccelerometer
@@ -16,7 +17,7 @@
 
 @implementation Tank
 
--(id)initWithSpace:(CPSpace*)space;
+-(id)init;
 {
   if(![super init]) return nil;
   
@@ -26,9 +27,9 @@
   body  = [[CPBody alloc] initWithMass:10.0 momentForCircleWithRadius:radius innerRadius:0 offset:cpvzero];
   shape = [[CPCircleShape alloc] initWithBody:body radius:radius offset:cpvzero];
   shape.friction = 0.5;
+
   
-  [space addBody:body];
-  [space addShape:shape];
+  shape.data = self;
   
   hasAccelerometer = NO;
   
@@ -36,6 +37,14 @@
   [TankAccelerometer sharedAccelerometer].updateInterval = 0.1;
   
   return self;
+}
+
+-(void)dealloc;
+{
+  [shape release];
+  [body release];
+  [texture release];
+  [super dealloc];
 }
 
 -(void)handleAccelerometerChangeX:(float)x y:(float)y;
@@ -67,10 +76,10 @@
   //delta to turn the tank
 
   float turn = (tiltangle - angle);
-  while(turn > M_PI) turn -= M_PI;
-  while(turn < -M_PI) turn += M_PI;
-  
-  body.angularVelocity = turn;
+  if(angle - tiltangle < turn) turn = angle-tiltangle;
+//  body.angularVelocity = turn;
+  if(y != 0 || x != 0)
+    body.angle = tiltangle*180.0/M_PI;
   body.velocity = vel;
   //[body applyForce:f atOffset:cpvzero];
   
@@ -89,7 +98,6 @@
 
 -(void)draw;
 {
-
   if(!hasAccelerometer)
     [self handleAccelerometerChangeX:0.3 y:0.2];
   
@@ -110,6 +118,12 @@
   [text release];
   
  // NSLog(@"tank position: %.2f %.2f", body.position.x, body.position.y);
+}
+
+-(BOOL)didCollideWith:(CPShape *)shape;
+{
+  collidedLastFrame = YES;
+  return YES;
 }
 
 @end

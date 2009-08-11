@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		058D8A2E10322749004BCA9E /* TCFakeAccelerometer.m in Sources */ = {isa = PBXBuildFile; fileRef = 058D8A2D10322749004BCA9E /* TCFakeAccelerometer.m */; };
+		0504ACDA103239D700F0BCBB /* TCFakeAccelerometer.m in Sources */ = {isa = PBXBuildFile; fileRef = 0504ACD9103239D700F0BCBB /* TCFakeAccelerometer.m */; };
 		05AEA74E1030949A007822B0 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 05AEA7451030949A007822B0 /* main.m */; };
 		05AEA74F1030949A007822B0 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 05AEA7461030949A007822B0 /* MainWindow.xib */; };
 		05AEA7501030949A007822B0 /* StervoxyTanksAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 05AEA7491030949A007822B0 /* StervoxyTanksAppDelegate.m */; };
@@ -65,13 +65,18 @@
 		2163841F1031A6AE0008D39F /* tank.png in Resources */ = {isa = PBXBuildFile; fileRef = 2163841E1031A6AE0008D39F /* tank.png */; };
 		216384331031AC770008D39F /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 216384321031AC770008D39F /* CoreGraphics.framework */; };
 		216385C11031C1590008D39F /* Level.m in Sources */ = {isa = PBXBuildFile; fileRef = 216385C01031C1590008D39F /* Level.m */; };
+		21638744103213630008D39F /* Bullet.m in Sources */ = {isa = PBXBuildFile; fileRef = 21638743103213630008D39F /* Bullet.m */; };
+		21638750103214E30008D39F /* bullet.png in Resources */ = {isa = PBXBuildFile; fileRef = 2163874F103214E30008D39F /* bullet.png */; };
+		216387701032186F0008D39F /* PhysicalObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 2163876F1032186F0008D39F /* PhysicalObject.m */; };
+		2163882A103220BF0008D39F /* Box.m in Sources */ = {isa = PBXBuildFile; fileRef = 21638829103220BF0008D39F /* Box.m */; };
+		21638854103222E20008D39F /* wall.png in Resources */ = {isa = PBXBuildFile; fileRef = 21638853103222E20008D39F /* wall.png */; };
 		28FD15000DC6FC520079059D /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 28FD14FF0DC6FC520079059D /* OpenGLES.framework */; };
 		28FD15080DC6FC5B0079059D /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 28FD15070DC6FC5B0079059D /* QuartzCore.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		058D8A2C10322749004BCA9E /* TCFakeAccelerometer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TCFakeAccelerometer.h; sourceTree = "<group>"; };
-		058D8A2D10322749004BCA9E /* TCFakeAccelerometer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TCFakeAccelerometer.m; sourceTree = "<group>"; };
+		0504ACD8103239D700F0BCBB /* TCFakeAccelerometer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TCFakeAccelerometer.h; sourceTree = "<group>"; };
+		0504ACD9103239D700F0BCBB /* TCFakeAccelerometer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TCFakeAccelerometer.m; sourceTree = "<group>"; };
 		05AEA7451030949A007822B0 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		05AEA7461030949A007822B0 /* MainWindow.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainWindow.xib; sourceTree = "<group>"; };
 		05AEA7471030949A007822B0 /* StervoxyTanks_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StervoxyTanks_Prefix.pch; sourceTree = "<group>"; };
@@ -178,6 +183,14 @@
 		216384321031AC770008D39F /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		216385BF1031C1590008D39F /* Level.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Level.h; sourceTree = "<group>"; };
 		216385C01031C1590008D39F /* Level.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Level.m; sourceTree = "<group>"; };
+		21638742103213630008D39F /* Bullet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Bullet.h; sourceTree = "<group>"; };
+		21638743103213630008D39F /* Bullet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Bullet.m; sourceTree = "<group>"; };
+		2163874F103214E30008D39F /* bullet.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bullet.png; sourceTree = "<group>"; };
+		2163876E1032186F0008D39F /* PhysicalObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhysicalObject.h; sourceTree = "<group>"; };
+		2163876F1032186F0008D39F /* PhysicalObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhysicalObject.m; sourceTree = "<group>"; };
+		21638828103220BF0008D39F /* Box.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Box.h; sourceTree = "<group>"; };
+		21638829103220BF0008D39F /* Box.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Box.m; sourceTree = "<group>"; };
+		21638853103222E20008D39F /* wall.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = wall.png; sourceTree = "<group>"; };
 		28FD14FF0DC6FC520079059D /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
 		28FD15070DC6FC5B0079059D /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
@@ -237,6 +250,12 @@
 				216384191031A5E10008D39F /* Tank.m */,
 				216385BF1031C1590008D39F /* Level.h */,
 				216385C01031C1590008D39F /* Level.m */,
+				21638742103213630008D39F /* Bullet.h */,
+				21638743103213630008D39F /* Bullet.m */,
+				21638828103220BF0008D39F /* Box.h */,
+				21638829103220BF0008D39F /* Box.m */,
+				2163876E1032186F0008D39F /* PhysicalObject.h */,
+				2163876F1032186F0008D39F /* PhysicalObject.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -260,6 +279,8 @@
 		05AEA755103094EA007822B0 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				21638853103222E20008D39F /* wall.png */,
+				2163874F103214E30008D39F /* bullet.png */,
 				2163841E1031A6AE0008D39F /* tank.png */,
 				05AEA756103094EA007822B0 /* StervoxyTanks-Info.plist */,
 			);
@@ -280,8 +301,8 @@
 			children = (
 				05AEA7811030B621007822B0 /* ActionTableController.m */,
 				05AEA7801030B621007822B0 /* ActionTableController.h */,
-				058D8A2C10322749004BCA9E /* TCFakeAccelerometer.h */,
-				058D8A2D10322749004BCA9E /* TCFakeAccelerometer.m */,
+				0504ACD8103239D700F0BCBB /* TCFakeAccelerometer.h */,
+				0504ACD9103239D700F0BCBB /* TCFakeAccelerometer.m */,
 			);
 			path = TouchUtil;
 			sourceTree = "<group>";
@@ -482,6 +503,8 @@
 				216384001031A5B80008D39F /* CMakeLists.txt in Resources */,
 				216384171031A5B80008D39F /* SConscript in Resources */,
 				2163841F1031A6AE0008D39F /* tank.png in Resources */,
+				21638750103214E30008D39F /* bullet.png in Resources */,
+				21638854103222E20008D39F /* wall.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -536,7 +559,10 @@
 				2163841A1031A5E10008D39F /* Tank.m in Sources */,
 				2163841D1031A6800008D39F /* Texture2D.m in Sources */,
 				216385C11031C1590008D39F /* Level.m in Sources */,
-				058D8A2E10322749004BCA9E /* TCFakeAccelerometer.m in Sources */,
+				21638744103213630008D39F /* Bullet.m in Sources */,
+				216387701032186F0008D39F /* PhysicalObject.m in Sources */,
+				2163882A103220BF0008D39F /* Box.m in Sources */,
+				0504ACDA103239D700F0BCBB /* TCFakeAccelerometer.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
