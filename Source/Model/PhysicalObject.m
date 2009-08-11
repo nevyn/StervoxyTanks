@@ -17,6 +17,8 @@
 {
   if(![super init]) return nil;
   
+  targetRect = CGRectMake(-0.05, -0.05, 0.1, 0.1);
+  
   return self;
 }
 
@@ -27,14 +29,14 @@
   //default translation, rotation and blitting
   glTranslatef(body.position.x, body.position.y, 0);
   glRotatef(body.angle-90, 0, 0, 1.0);
-  [texture drawInRect:CGRectMake(-0.05, -0.05, 0.1, 0.1)];
+  [texture drawInRect:targetRect];
   
   glPopMatrix();
 }
 
--(void)didCollideWith:(CPShape *)shape;
+-(BOOL)didCollideWith:(CPShape *)otherShape;
 {
-
+  return YES;
 }
 
 -(void)addToSpace:(CPSpace*)space;
@@ -46,7 +48,7 @@
 -(void)removeFromSpace:(CPSpace*)space;
 {
   [space removeBody:body];
-  [space removeShape:body];
+  [space removeShape:shape];
 }
 
 @end

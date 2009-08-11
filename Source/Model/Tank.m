@@ -42,10 +42,6 @@
 
 -(void)handleAccelerometerChangeX:(float)x y:(float)y;
 {
-  if(collidedLastFrame){
-    collidedLastFrame = NO;
-    return;
-  }
   
   if(fabsf(x) > 0.1){ //deadzone
     x = x/2.0; //0 - +-0.5
@@ -87,7 +83,7 @@
 {
   float x = acceleration.x; //-left     +right
   float y = acceleration.y; //+forward  -backward
-  float z = acceleration.z; //+front    -back
+//  float z = acceleration.z; //+front    -back
   [self handleAccelerometerChangeX:x y:y];
   hasAccelerometer = YES;
 }
@@ -119,6 +115,7 @@
 -(BOOL)didCollideWith:(CPShape *)shape;
 {
   collidedLastFrame = YES;
+  return YES;
 }
 
 @end

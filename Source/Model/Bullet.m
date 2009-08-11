@@ -11,6 +11,8 @@
 
 @implementation Bullet
 
+@synthesize bouncesLeft;
+
 -(id)init;
 {
   if(![super init]) return nil;
@@ -30,9 +32,9 @@
 }
 
 
--(BOOL)didCollideWith:(CPShape*)shape;
+-(BOOL)didCollideWith:(CPShape*)otherShape;
 {
-  if([shape.data isKindOfClass:Tank.class]) return YES;
+  if([otherShape.data isKindOfClass:Tank.class]) return YES;
   if(bouncesLeft > 0){
     //bounce
     bouncesLeft--;

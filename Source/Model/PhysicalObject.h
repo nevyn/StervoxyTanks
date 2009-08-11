@@ -15,6 +15,7 @@
   Texture2D *texture;
   CPBody *body;
   CPShape *shape;  
+  CGRect targetRect;
 }
 
 @property (nonatomic, readonly) CPShape *shape;
@@ -26,6 +27,8 @@
 -(void)addToSpace:(CPSpace*)space;
 -(void)removeFromSpace:(CPSpace*)space;
 
--(BOOL)didCollideWith:(CPShape *)shape;
+-(BOOL)didCollideWith:(CPShape *)otherShape;
+
+-(void)draw;
 
 @end

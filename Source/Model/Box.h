@@ -1,5 +1,5 @@
 //
-//  Bullet.h
+//  Box.h
 //  StervoxyTanks
 //
 //  Created by Patrik Sjöberg on 2009-08-11.
@@ -8,15 +8,12 @@
 
 #import <Foundation/Foundation.h>
 
-#import "CPChipmunk.h"
-#import "Texture2D.h"
 #import "PhysicalObject.h"
 
-@interface Bullet : PhysicalObject {
+@interface Box : PhysicalObject {
 
-  int bouncesLeft;
 }
-@property (readonly, nonatomic) int bouncesLeft;
 
+-(id)initWithRect:(CGRect)rect;
 
 @end

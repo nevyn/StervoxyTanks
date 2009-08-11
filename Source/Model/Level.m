@@ -9,6 +9,7 @@
 #import "Level.h"
 
 #import "Bullet.h"
+#import "Box.h"
 
 @implementation Level
 
@@ -67,6 +68,12 @@
   [self wallFrom:cpv(-width, height) to:cpv(width, height)]; //top
   [self wallFrom:cpv(-width, -height) to:cpv(width, -height)]; //bottom
   
+  
+  Box *box = [[Box alloc] initWithRect:CGRectMake(-0, 0, 0.2, 0.2)];
+  [box addToSpace:space];
+  [bullets addObject:box];
+  [box release];
+  
   NSLog(@"Level loaded");
 }
 
@@ -84,6 +91,14 @@
 
 -(void)draw;
 {
+  if(somethingCollided){
+    glClearColor(1.0f, 0.5f, 0.5f, 1.0f);
+    glClear(GL_COLOR_BUFFER_BIT);
+    somethingCollided = NO;
+  } else {
+    glClearColor(0.5f, 0.5f, 0.5f, 1.0f);
+    glClear(GL_COLOR_BUFFER_BIT); 
+  }
   [tank draw];
   for(PhysicalObject *obj in bullets){
     [obj draw];
@@ -115,6 +130,7 @@
   if([shape2.data isKindOfClass:PhysicalObject.class])
     if(! [((PhysicalObject*)shape2.data) didCollideWith:shape1]) return NO;
   
+  somethingCollided = YES;
   //yes, handle collision please
   return YES;
 }
