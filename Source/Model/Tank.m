@@ -9,11 +9,11 @@
 #import "Tank.h"
 
 #import "TCFakeAccelerometer.h"
-//#ifdef TARGET_IPHONE_SIMULATOR
-//#	define TankAccelerometer TCFakeAccelerometer
-//#else
+#if TARGET_IPHONE_SIMULATOR
+#	define TankAccelerometer TCFakeAccelerometer
+#else
 #	define TankAccelerometer UIAccelerometer
-//#endif
+#endif
 
 @implementation Tank
 
