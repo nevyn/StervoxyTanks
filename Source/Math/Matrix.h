@@ -1,7 +1,7 @@
 // GLSL versions 1.00 and 1.10 support matrix data types of the form mat2, mat3, mat4.
 // GLSL version 1.20 adds support for non-square matrixes: mat2x3, mat2x4, mat3x2, mat3x4, mat4x2, mat4x3.
 
-#import <Cocoa/Cocoa.h>
+#import <Foundation/Foundation.h>
 
 @class Vector4;
 

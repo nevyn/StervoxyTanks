@@ -8,6 +8,13 @@
 
 #import "Tank.h"
 
+#import "TCFakeAccelerometer.h"
+//#ifdef TARGET_IPHONE_SIMULATOR
+//#	define TankAccelerometer TCFakeAccelerometer
+//#else
+#	define TankAccelerometer UIAccelerometer
+//#endif
+
 @implementation Tank
 
 -(id)init;
@@ -26,8 +33,8 @@
   
   hasAccelerometer = NO;
   
-  [UIAccelerometer sharedAccelerometer].delegate = self;
-  [UIAccelerometer sharedAccelerometer].updateInterval = 0.1;
+  [TankAccelerometer sharedAccelerometer].delegate = self;
+  [TankAccelerometer sharedAccelerometer].updateInterval = 0.1;
   
   return self;
 }
@@ -83,7 +90,8 @@
 {
   float x = acceleration.x; //-left     +right
   float y = acceleration.y; //+forward  -backward
-//  float z = acceleration.z; //+front    -back
+  //float z = acceleration.z; //+front    -back
+	NSLog(@"%f %f", x, y);
   [self handleAccelerometerChangeX:x y:y];
   hasAccelerometer = YES;
 }

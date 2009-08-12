@@ -38,6 +38,7 @@ Note that setting the view non-opaque will only work if the EAGL surface has an 
 
 @property NSTimeInterval animationInterval;
 
+-(id)commonInit;
 - (void)startAnimation;
 - (void)stopAnimation;
 - (void)drawView;
