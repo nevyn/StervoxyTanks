@@ -47,4 +47,19 @@
 	self.navigationController.navigationBarHidden = NO;
 }
 
+- (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event;
+{
+  
+}
+
+- (void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event;
+{
+  CGPoint point = [[touches anyObject] locationInView:nil];
+  //translate to -1 - 1, -1.5 - 1.5
+  point.x = (point.x / gameView.bounds.size.width)*2 - 1;
+  point.y = ((gameView.bounds.size.height-point.y) / gameView.bounds.size.height)*3 - 1.5;
+  NSLog(@"Fiering @ %.3f %.3f", point.x, point.y);
+  [gameView.level shootAt:point];
+}
+
 @end

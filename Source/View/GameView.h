@@ -12,9 +12,13 @@
 #import "Tank.h"
 #import "Level.h"
 
+@class GameController;
+
 @interface GameView : EAGLView {
   Tank *tank;
   Level *level;
 }
+
+@property (readonly, nonatomic) Level* level;
 
 @end

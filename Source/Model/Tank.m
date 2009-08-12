@@ -76,7 +76,7 @@
   body.velocity = vel;
   //[body applyForce:f atOffset:cpvzero];
   
-  NSLog(@"angle: %.3f tilt: %.3f turn: %.3f", angle, tiltangle);
+  //NSLog(@"angle: %.3f tilt: %.3f turn: %.3f", angle, tiltangle);
 }
 
 - (void)accelerometer:(UIAccelerometer *)accelerometer didAccelerate:(UIAcceleration *)acceleration;

@@ -9,7 +9,7 @@
 #import "GameView.h"
 
 @implementation GameView
-
+@synthesize level;
 
 -(id)commonInit;
 {

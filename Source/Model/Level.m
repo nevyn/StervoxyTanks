@@ -80,13 +80,6 @@
 -(void)update;
 {
   [space stepWithDelta:0.4f];
-  
-  static float timer = 0;
-  timer += 1.0/60.0f;
-  if(timer > 1.5){
-    timer = 0;
-    [self shootAt:CGPointMake(-0.5, 0.5)];
-  }
 }
 
 -(void)draw;
