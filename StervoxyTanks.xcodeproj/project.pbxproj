@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		0504ACDA103239D700F0BCBB /* TCFakeAccelerometer.m in Sources */ = {isa = PBXBuildFile; fileRef = 0504ACD9103239D700F0BCBB /* TCFakeAccelerometer.m */; };
 		0504AE741033104E00F0BCBB /* STNetwork.m in Sources */ = {isa = PBXBuildFile; fileRef = 0504AE731033104E00F0BCBB /* STNetwork.m */; };
+		0504AF0C1033177000F0BCBB /* Tank.json in Resources */ = {isa = PBXBuildFile; fileRef = 0504AEDA103316A300F0BCBB /* Tank.json */; };
 		05AEA74E1030949A007822B0 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 05AEA7451030949A007822B0 /* main.m */; };
 		05AEA74F1030949A007822B0 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 05AEA7461030949A007822B0 /* MainWindow.xib */; };
 		05AEA7501030949A007822B0 /* StervoxyTanksAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 05AEA7491030949A007822B0 /* StervoxyTanksAppDelegate.m */; };
@@ -88,7 +89,7 @@
 		21638F7D103311470008D39F /* SBJsonBase.m in Sources */ = {isa = PBXBuildFile; fileRef = 21638F75103311470008D39F /* SBJsonBase.m */; };
 		21638F7E103311470008D39F /* SBJsonParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 21638F77103311470008D39F /* SBJsonParser.m */; };
 		21638F7F103311470008D39F /* SBJsonWriter.m in Sources */ = {isa = PBXBuildFile; fileRef = 21638F79103311470008D39F /* SBJsonWriter.m */; };
-		2163906710331EE80008D39F /* cutils.m in Sources */ = {isa = PBXBuildFile; fileRef = 2163906610331EE80008D39F /* cutils.m */; };
+		21639102103324650008D39F /* cutils.m in Sources */ = {isa = PBXBuildFile; fileRef = 21639100103324650008D39F /* cutils.m */; };
 		28FD15000DC6FC520079059D /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 28FD14FF0DC6FC520079059D /* OpenGLES.framework */; };
 		28FD15080DC6FC5B0079059D /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 28FD15070DC6FC5B0079059D /* QuartzCore.framework */; };
 		D81E680110323D9000509B49 /* Component.m in Sources */ = {isa = PBXBuildFile; fileRef = D81E67FE10323D9000509B49 /* Component.m */; };
@@ -109,6 +110,7 @@
 		0504ACD9103239D700F0BCBB /* TCFakeAccelerometer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TCFakeAccelerometer.m; sourceTree = "<group>"; };
 		0504AE721033104E00F0BCBB /* STNetwork.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STNetwork.h; sourceTree = "<group>"; };
 		0504AE731033104E00F0BCBB /* STNetwork.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STNetwork.m; sourceTree = "<group>"; };
+		0504AEDA103316A300F0BCBB /* Tank.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Tank.json; sourceTree = "<group>"; };
 		05AEA7451030949A007822B0 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		05AEA7461030949A007822B0 /* MainWindow.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainWindow.xib; sourceTree = "<group>"; };
 		05AEA7471030949A007822B0 /* StervoxyTanks_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StervoxyTanks_Prefix.pch; sourceTree = "<group>"; };
@@ -252,8 +254,8 @@
 		21638F77103311470008D39F /* SBJsonParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBJsonParser.m; sourceTree = "<group>"; };
 		21638F78103311470008D39F /* SBJsonWriter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJsonWriter.h; sourceTree = "<group>"; };
 		21638F79103311470008D39F /* SBJsonWriter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBJsonWriter.m; sourceTree = "<group>"; };
-		2163906510331EE80008D39F /* cutils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cutils.h; sourceTree = "<group>"; };
-		2163906610331EE80008D39F /* cutils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = cutils.m; sourceTree = "<group>"; };
+		21639100103324650008D39F /* cutils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = cutils.m; sourceTree = "<group>"; };
+		21639101103324650008D39F /* cutils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cutils.h; sourceTree = "<group>"; };
 		28FD14FF0DC6FC520079059D /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
 		28FD15070DC6FC5B0079059D /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		D81E67FD10323D9000509B49 /* Component.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Component.h; sourceTree = "<group>"; };
@@ -388,6 +390,7 @@
 				2163841E1031A6AE0008D39F /* tank.png */,
 				05AEA756103094EA007822B0 /* StervoxyTanks-Info.plist */,
 				21638AA4103244150008D39F /* icon.png */,
+				0504AEDA103316A300F0BCBB /* Tank.json */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -408,8 +411,8 @@
 				05AEA7801030B621007822B0 /* ActionTableController.h */,
 				0504ACD8103239D700F0BCBB /* TCFakeAccelerometer.h */,
 				0504ACD9103239D700F0BCBB /* TCFakeAccelerometer.m */,
-				2163906510331EE80008D39F /* cutils.h */,
-				2163906610331EE80008D39F /* cutils.m */,
+				21639100103324650008D39F /* cutils.m */,
+				21639101103324650008D39F /* cutils.h */,
 			);
 			path = TouchUtil;
 			sourceTree = "<group>";
@@ -675,6 +678,7 @@
 				21638ABE103247840008D39F /* explosion-1.png in Resources */,
 				21638ABF103247840008D39F /* explosion-2.png in Resources */,
 				21638AC0103247840008D39F /* explosion-3.png in Resources */,
+				0504AF0C1033177000F0BCBB /* Tank.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -757,7 +761,7 @@
 				21638F7D103311470008D39F /* SBJsonBase.m in Sources */,
 				21638F7E103311470008D39F /* SBJsonParser.m in Sources */,
 				21638F7F103311470008D39F /* SBJsonWriter.m in Sources */,
-				2163906710331EE80008D39F /* cutils.m in Sources */,
+				21639102103324650008D39F /* cutils.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

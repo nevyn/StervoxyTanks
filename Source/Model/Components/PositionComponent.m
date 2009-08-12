@@ -13,15 +13,12 @@
 
 @synthesize position; 
 
-- (id)initFromDictionary:(NSDictionary *)component;
+-(id)initWithDictionary:(NSDictionary*)props entityID:(uint64_t)eid_;
 {
-	if (![super init]) return nil;
+	if (![super initWithDictionary:props entityID:eid_]) return nil;
 	
-	//rawJson = @"{ \"position\" : [ 2.4, 1.99 ] }";
 	
-	//id component = [[[SBJsonParser new] autorelease] objectWithString:rawJson];
-		
-	NSMutableArray *pos = [component objectForKey:@"position"];
+	NSMutableArray *pos = [props objectForKey:@"position"];
 	position = [Vector2 vectorWithX:[[pos objectAtIndex:0] doubleValue]
 								  y:[[pos objectAtIndex:1] doubleValue]];
 	

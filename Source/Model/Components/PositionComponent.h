@@ -16,6 +16,5 @@
 
 @property (copy) Vector2 *position;
 
-- (id)initFromJSON:(NSString *)rawJson;
-
+-(id)initWithDictionary:(NSDictionary*)props entityID:(uint64_t)eid_;
 @end

@@ -7,12 +7,12 @@
 //
 
 #import <Foundation/Foundation.h>
-
+#import "Component.h"
 
 @interface Factory : NSObject {
 
 }
 
-- (int)entityNamed:(NSString *)name;
++ (int)entityFromArchetype:(NSString *)name;
 
 @end
