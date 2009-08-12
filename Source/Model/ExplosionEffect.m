@@ -8,6 +8,7 @@
 
 #import "ExplosionEffect.h"
 
+static NSArray *superSecretStaticTexturesArray;
 
 @implementation ExplosionEffect
 
@@ -15,7 +16,9 @@
 {
   if(![super initAt:point_]) return nil;
   
-  textures = [[NSArray alloc] initWithObjects:[Texture2D textureNamed:@"explosion-1.png"],[Texture2D textureNamed:@"explosion-2.png"],[Texture2D textureNamed:@"explosion-3.png"],nil];
+  if(!superSecretStaticTexturesArray)
+    superSecretStaticTexturesArray = [[NSArray alloc] initWithObjects:[Texture2D textureNamed:@"explosion-1.png"],[Texture2D textureNamed:@"explosion-2.png"],[Texture2D textureNamed:@"explosion-3.png"],nil];
+  textures = superSecretStaticTexturesArray;
   currentTexture = [textures objectAtIndex:0];
   
   life = 0;

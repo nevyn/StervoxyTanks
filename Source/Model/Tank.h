@@ -10,16 +10,28 @@
 #import "Texture2D.h"
 #import "CPChipmunk.h"
 #import "PhysicalObject.h"
+#import "TankController.h"
 
-@interface Tank : PhysicalObject <UIAccelerometerDelegate> {
+@interface Tank : PhysicalObject <UIAccelerometerDelegate, CPBodyDelegate> {
   
-  BOOL hasAccelerometer;
   BOOL collidedLastFrame;
+  
+  cpVect newVelocity;
+  float newAngle;
+  
+  id<TankController> controller;
 }
 
-- (void)accelerometer:(UIAccelerometer *)accelerometer didAccelerate:(UIAcceleration *)acceleration;
+@property (nonatomic, retain) id<TankController> controller;
+
 
 -(void)draw;
 
+
+-(void)integrateVelocityForBody:(CPBody*)b gravity:(cpVect)gravity damping:(cpFloat)damping delta:(cpFloat)dt;
+//heading and speed (length of vector)
+-(void)setHeading:(CGPoint)headingVector;
+
+-(void)shootAt:(CGPoint)point;
 
 @end

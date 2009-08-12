@@ -10,15 +10,18 @@
 
 #import "CPChipmunk.h"
 #import "Tank.h"
+#import "Bullet.h"
 
-@interface Level : NSObject {
+
+@interface Level : NSObject<PhysicalObjectDelegate, BulletDelegate> {
   
   NSMutableArray *staticObjects;
   CPBody *staticBody;
   
   CPSpace *space;
   
-  Tank *tank;
+  NSMutableArray *tanks;
+  Tank *playerTank;
   
   NSMutableArray *bullets;
   
@@ -28,7 +31,7 @@
   
 }
 
-@property (readonly, nonatomic) Tank *tank;
+@property (readonly, nonatomic) Tank *playerTank;
 @property (readonly, nonatomic) CPSpace *space;
 
 -(void)wallFrom:(cpVect)p1 to:(cpVect)p2;
@@ -38,7 +41,10 @@
 
 -(void)loadLevel:(int)levelNumber;
 
--(void)shootAt:(CGPoint)point;
+-(void)createBulletAt:(CGPoint)point heading:(CGPoint)heading;
 
+//Delegate stuff
+-(BOOL)shapesDidCollide:(CPShape*)shape1 with:(CPShape*)shape2 contacts:(NSArray*)contacts normalCoefficient:(cpFloat)normal_coef;
+-(void)bullet:(Bullet*)bullet hits:(CPShape*)otherShape exploading:(BOOL)exploads;
 
 @end

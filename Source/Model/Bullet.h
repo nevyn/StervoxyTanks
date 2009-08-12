@@ -21,9 +21,7 @@
 
 @end
 
-@interface NSObject (BulletDelegate)
-
+@protocol BulletDelegate
 -(void)bullet:(Bullet*)bullet hits:(CPShape*)shape exploading:(BOOL)exploads;
-
 @end
 

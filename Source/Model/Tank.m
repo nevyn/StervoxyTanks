@@ -7,15 +7,11 @@
 //
 
 #import "Tank.h"
-
-#import "TCFakeAccelerometer.h"
-#if TARGET_IPHONE_SIMULATOR
-#	define TankAccelerometer TCFakeAccelerometer
-#else
-#	define TankAccelerometer UIAccelerometer
-#endif
+#import "Game.h"
 
 @implementation Tank
+
+@synthesize controller;
 
 -(id)init;
 {
@@ -28,13 +24,9 @@
   shape = [[CPCircleShape alloc] initWithBody:body radius:radius offset:cpvzero];
   shape.friction = 0.5;
 
-  
+  body.delegate = self;
   shape.data = self;
   
-  hasAccelerometer = NO;
-  
-  [TankAccelerometer sharedAccelerometer].delegate = self;
-  [TankAccelerometer sharedAccelerometer].updateInterval = 0.1;
   
   return self;
 }
@@ -47,59 +39,8 @@
   [super dealloc];
 }
 
--(void)handleAccelerometerChangeX:(float)x y:(float)y;
-{
-  
-  if(fabsf(x) > 0.1){ //deadzone
-    x = x/2.0; //0 - +-0.5
-  } else {
-    x = 0;
-  }
-  if(fabsf(y) > 0.1){
-    y = y/2.0;
-  } else {
-    y = 0;
-  }
-  
-  float angle = body.angle*M_PI/180.0;
-  //speed
-  float speed = sqrt(x*x+y*y);
-  speed = speed * 0.05;
-  //velocity vector based on heading
-  float sx = speed * cos(angle);
-  float sy = speed * sin(angle);
-  cpVect vel = cpv(sx, sy);
-  
-  //turning
-  //angle iphone is tilted at
-  float tiltangle = atan2f(y, x);
-  //delta to turn the tank
-
-  float turn = (tiltangle - angle);
-  if(angle - tiltangle < turn) turn = angle-tiltangle;
-//  body.angularVelocity = turn;
-  if(y != 0 || x != 0)
-    body.angle = tiltangle*180.0/M_PI;
-  body.velocity = vel;
-  //[body applyForce:f atOffset:cpvzero];
-  
-  //NSLog(@"angle: %.3f tilt: %.3f turn: %.3f", angle, tiltangle);
-}
-
-- (void)accelerometer:(UIAccelerometer *)accelerometer didAccelerate:(UIAcceleration *)acceleration;
-{
-  float x = acceleration.x; //-left     +right
-  float y = acceleration.y; //+forward  -backward
-  //float z = acceleration.z; //+front    -back
-	NSLog(@"%f %f", x, y);
-  [self handleAccelerometerChangeX:x y:y];
-  hasAccelerometer = YES;
-}
-
 -(void)draw;
 {
-  if(!hasAccelerometer)
-    [self handleAccelerometerChangeX:0.3 y:0.2];
   
   glPushMatrix();
   
@@ -120,10 +61,55 @@
  // NSLog(@"tank position: %.2f %.2f", body.position.x, body.position.y);
 }
 
--(BOOL)didCollideWith:(CPShape *)shape;
+-(BOOL)didCollideWith:(CPShape *)s;
 {
+  [controller tank:self collidedWithShape:s];
   collidedLastFrame = YES;
   return YES;
 }
+
+-(void)integrateVelocityForBody:(CPBody*)b gravity:(cpVect)gravity damping:(cpFloat)damping delta:(cpFloat)dt;{
+  [controller updateTank:self];
+  
+  body.angle = newAngle;
+  body.velocity = newVelocity;
+}
+
+-(void)setHeading:(CGPoint)headingVector;
+{
+  float x = headingVector.x;
+  float y = headingVector.y;
+  float angle = body.angle*M_PI/180.0;
+  //speed
+  float speed = sqrt(x*x+y*y);
+  speed = speed * 0.05;
+  //velocity vector based on heading
+  float sx = speed * cos(angle);
+  float sy = speed * sin(angle);
+  cpVect vel = cpv(sx, sy);
+  
+  //turning
+  //angle iphone is tilted at
+  float tiltangle = atan2f(y, x);
+  //delta to turn the tank
+  
+  float turn = (tiltangle - angle);
+  if(angle - tiltangle < turn) turn = angle-tiltangle;
+  //  body.angularVelocity = turn;
+  if(y != 0 || x != 0)
+    newAngle  = tiltangle*180.0/M_PI;
+  newVelocity = vel;
+  //[body applyForce:f atOffset:cpvzero];
+  
+  //NSLog(@"angle: %.3f tilt: %.3f turn: %.3f", angle, tiltangle);  
+}
+
+-(void)shootAt:(CGPoint)point;
+{
+  CGPoint pFrom = CGPointMake(body.position.x, body.position.y);
+  
+  [[Game sharedGame].currentLevel createBulletAt:pFrom heading:point];
+}
+
 
 @end

@@ -7,6 +7,7 @@
 //
 
 #import "GameView.h"
+#import "Game.h"
 
 @implementation GameView
 @synthesize level;
@@ -17,6 +18,7 @@
   [CPChipmunk initChipmunk];
 
   level = [[Level alloc] init];
+  [Game sharedGame].currentLevel = level;
   
   return self;
 }

@@ -77,6 +77,10 @@
 		21638AC0103247840008D39F /* explosion-3.png in Resources */ = {isa = PBXBuildFile; fileRef = 21638ABD103247840008D39F /* explosion-3.png */; };
 		21638AC3103247AD0008D39F /* Effect.m in Sources */ = {isa = PBXBuildFile; fileRef = 21638AC2103247AD0008D39F /* Effect.m */; };
 		21638AC6103248230008D39F /* ExplosionEffect.m in Sources */ = {isa = PBXBuildFile; fileRef = 21638AC5103248230008D39F /* ExplosionEffect.m */; };
+		21638D391032F93D0008D39F /* TankController.m in Sources */ = {isa = PBXBuildFile; fileRef = 21638D381032F93D0008D39F /* TankController.m */; };
+		21638DDB103301070008D39F /* AccelerometerTankController.m in Sources */ = {isa = PBXBuildFile; fileRef = 21638DDA103301070008D39F /* AccelerometerTankController.m */; };
+		21638DDE1033017B0008D39F /* AITankController.m in Sources */ = {isa = PBXBuildFile; fileRef = 21638DDD1033017B0008D39F /* AITankController.m */; };
+		21638E33103303960008D39F /* Game.m in Sources */ = {isa = PBXBuildFile; fileRef = 21638E32103303960008D39F /* Game.m */; };
 		28FD15000DC6FC520079059D /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 28FD14FF0DC6FC520079059D /* OpenGLES.framework */; };
 		28FD15080DC6FC5B0079059D /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 28FD15070DC6FC5B0079059D /* QuartzCore.framework */; };
 		D81E680110323D9000509B49 /* Component.m in Sources */ = {isa = PBXBuildFile; fileRef = D81E67FE10323D9000509B49 /* Component.m */; };
@@ -215,6 +219,13 @@
 		21638AC2103247AD0008D39F /* Effect.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Effect.m; sourceTree = "<group>"; };
 		21638AC4103248230008D39F /* ExplosionEffect.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExplosionEffect.h; sourceTree = "<group>"; };
 		21638AC5103248230008D39F /* ExplosionEffect.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ExplosionEffect.m; sourceTree = "<group>"; };
+		21638D371032F93D0008D39F /* TankController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TankController.h; sourceTree = "<group>"; };
+		21638D381032F93D0008D39F /* TankController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TankController.m; sourceTree = "<group>"; };
+		21638DDA103301070008D39F /* AccelerometerTankController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AccelerometerTankController.m; sourceTree = "<group>"; };
+		21638DDC1033017B0008D39F /* AITankController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AITankController.h; sourceTree = "<group>"; };
+		21638DDD1033017B0008D39F /* AITankController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AITankController.m; sourceTree = "<group>"; };
+		21638E31103303960008D39F /* Game.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Game.h; sourceTree = "<group>"; };
+		21638E32103303960008D39F /* Game.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Game.m; sourceTree = "<group>"; };
 		28FD14FF0DC6FC520079059D /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
 		28FD15070DC6FC5B0079059D /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		D81E67FD10323D9000509B49 /* Component.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Component.h; sourceTree = "<group>"; };
@@ -302,6 +313,13 @@
 				21638AC2103247AD0008D39F /* Effect.m */,
 				21638AC4103248230008D39F /* ExplosionEffect.h */,
 				21638AC5103248230008D39F /* ExplosionEffect.m */,
+				21638D371032F93D0008D39F /* TankController.h */,
+				21638D381032F93D0008D39F /* TankController.m */,
+				21638DDA103301070008D39F /* AccelerometerTankController.m */,
+				21638DDC1033017B0008D39F /* AITankController.h */,
+				21638DDD1033017B0008D39F /* AITankController.m */,
+				21638E31103303960008D39F /* Game.h */,
+				21638E32103303960008D39F /* Game.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -659,6 +677,10 @@
 				D81E681910323DA800509B49 /* Vector4.m in Sources */,
 				21638AC3103247AD0008D39F /* Effect.m in Sources */,
 				21638AC6103248230008D39F /* ExplosionEffect.m in Sources */,
+				21638D391032F93D0008D39F /* TankController.m in Sources */,
+				21638DDB103301070008D39F /* AccelerometerTankController.m in Sources */,
+				21638DDE1033017B0008D39F /* AITankController.m in Sources */,
+				21638E33103303960008D39F /* Game.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
