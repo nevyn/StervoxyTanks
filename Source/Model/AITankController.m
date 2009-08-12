@@ -9,6 +9,7 @@
 #import "AITankController.h"
 #import "Tank.h"
 #import "Game.h"
+#import "Level.h"
 
 float frand(){
   return (rand()%10000000) / 10000000.0;
@@ -25,7 +26,8 @@ float frand(){
   if(nextShot <= 0){
     nextShot = frand()*3;
     NSLog(@"next shot in %f", nextShot);
-    CGPoint target = CGPointMake(frand()*2-1, frand()*2-1);
+    Tank *playerTank = [Game sharedGame].currentLevel.playerTank;
+    CGPoint target = CGPointMake(playerTank.body.position.x, playerTank.body.position.y);
     [tank shootAt:target];
   }
   t += M_PI/50.0;

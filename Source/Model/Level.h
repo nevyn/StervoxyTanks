@@ -41,7 +41,7 @@
 
 -(void)loadLevel:(int)levelNumber;
 
--(void)createBulletAt:(CGPoint)point heading:(CGPoint)heading;
+-(void)createBulletAt:(CGPoint)pFrom heading:(CGPoint)pTo;
 
 //Delegate stuff
 -(BOOL)shapesDidCollide:(CPShape*)shape1 with:(CPShape*)shape2 contacts:(NSArray*)contacts normalCoefficient:(cpFloat)normal_coef;

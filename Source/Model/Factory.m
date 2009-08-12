@@ -7,7 +7,7 @@
 //
 
 #import "Factory.h"
-
+#import "SBJsonParser.h"
 
 @implementation Factory
 
@@ -43,9 +43,9 @@
 	
 	for(id componentInfo in archetype) {
 		Class componentClass = NSClassFromString([componentInfo objectForKey:@"type"]);
-		if(NSClass == nil) continue;
+		if(componentClass == nil) continue;
 		
-		[[componentClass alloc] initFromDictionary:[componentInfo objectForKey:@"data"];
+		[[componentClass alloc] initFromDictionary:[componentInfo objectForKey:@"data"]];
 	}
 }
 
