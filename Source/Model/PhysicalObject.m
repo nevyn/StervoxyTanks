@@ -11,7 +11,7 @@
 
 @implementation PhysicalObject
 
-@synthesize shape, body, texture;
+@synthesize delegate, shape, body, texture;
 
 -(id)init;
 {
@@ -36,6 +36,8 @@
 
 -(BOOL)didCollideWith:(CPShape *)otherShape;
 {
+  if([delegate respondsToSelector:@selector(physicalObject:didCollideWith:)])
+    [delegate physicalObject:self didCollideWith:otherShape];
   return YES;
 }
 

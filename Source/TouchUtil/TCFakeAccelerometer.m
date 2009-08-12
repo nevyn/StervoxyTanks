@@ -63,9 +63,9 @@ static TCFakeAccelerometer *fakeAccelerometer;
 
 	NSArray *xyza = [xyz componentsSeparatedByString:@"\t"];
 	UIAcceleration *accel = [[[UIAcceleration alloc] init] autorelease];
-	accel.x = -[[xyza objectAtIndex:0] doubleValue];
+	accel.x = [[xyza objectAtIndex:0] doubleValue];
 	accel.z = [[xyza objectAtIndex:1] doubleValue];
-	accel.y = -[[xyza objectAtIndex:2] doubleValue];
+	accel.y = [[xyza objectAtIndex:2] doubleValue];
 	accel.timestamp = [NSDate timeIntervalSinceReferenceDate];
 	
 	[delegate accelerometer:(UIAccelerometer*)self didAccelerate:accel];

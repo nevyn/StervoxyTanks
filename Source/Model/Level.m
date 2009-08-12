@@ -10,10 +10,14 @@
 
 #import "Bullet.h"
 #import "Box.h"
+#import "Effect.h"
+#import "ExplosionEffect.h"
+#import "AITankController.h"
+#import "TankController.h"
 
 @implementation Level
 
-@synthesize tank, space;
+@synthesize playerTank, space;
 
 -(id)init;
 {
@@ -27,21 +31,26 @@
   
   bullets = [[NSMutableArray alloc] init];
   
-  tank = [[Tank alloc] init];
-  [tank addToSpace:space];
+  effects = [[NSMutableArray alloc] init];
   
+  tanks = [[NSMutableArray alloc] init];
+    
   [self loadLevel:1];
+
   
   return self;
 }
 
 -(void)dealloc;
 {
-  [tank removeFromSpace:space];
+  for(Tank *tank in tanks)
+    [tank removeFromSpace:space];
+  [tanks release];
   
   [staticBody release];
   [staticObjects release];
   [space release];
+  [effects release];
   [super dealloc];
 }
 
@@ -73,6 +82,18 @@
   [box addToSpace:space];
   [bullets addObject:box];
   [box release];
+
+  //player tank
+  playerTank = [[Tank alloc] init];
+  [playerTank addToSpace:space];
+  playerTank.controller = [[[AccelerometerTankController alloc] init] autorelease];
+  [tanks addObject:playerTank];
+  
+  //enemy tank
+  Tank *tank = [[Tank alloc] init];
+  [tank addToSpace:space];
+  tank.controller = [[[AITankController alloc] init] autorelease];
+  [tanks addObject:tank];
   
   NSLog(@"Level loaded");
 }
@@ -80,6 +101,11 @@
 -(void)update;
 {
   [space stepWithDelta:0.4f];
+  for(Effect *effect in [effects copy]){
+    if(! [effect updateWithDelta:1/60.0]){
+      [effects removeObject:effect];
+    }
+  }
 }
 
 -(void)draw;
@@ -92,24 +118,27 @@
     glClearColor(0.5f, 0.5f, 0.5f, 1.0f);
     glClear(GL_COLOR_BUFFER_BIT); 
   }
-  [tank draw];
+  for(Tank *tank in tanks)
+    [tank draw];
   for(PhysicalObject *obj in bullets){
     [obj draw];
   }
+  
+  for(Effect *effect in effects)
+    [effect draw];
 }
 
--(void)shootAt:(CGPoint)point;
+-(void)createBulletAt:(CGPoint)pFrom heading:(CGPoint)pTo;
 {
-  cpVect pTo = cpv(point.x, point.y);
-  cpVect pFrom = tank.body.position;
   float angle = atan2(pTo.y-pFrom.y, pTo.x-pFrom.y);
   
   Bullet *bullet = [[Bullet alloc] init];
-  bullet.body.position = pFrom;
+  bullet.body.position = cpv(pFrom.x, pFrom.y);
   bullet.body.angle = angle;
   float speed = 0.1;
   bullet.body.velocity = cpv(speed * cos(angle), speed * sin(angle));
   bullet.shape.elasticity = 1.0;
+  bullet.delegate = self;
   
   [bullet addToSpace:space];
   [bullets addObject:bullet];
@@ -127,5 +156,18 @@
   //yes, handle collision please
   return YES;
 }
+
+-(void)bullet:(Bullet*)bullet hits:(CPShape*)otherShape exploading:(BOOL)exploads;
+{
+  if(exploads){
+    [bullet removeFromSpace:space];
+    [bullets removeObject:bullet];
+    cpVect p = bullet.body.position;
+    Effect *fx = [[ExplosionEffect alloc] initAt:CGPointMake(p.x, p.y)];
+    [effects addObject:fx];
+    [fx release];
+  }
+}
+
 
 @end

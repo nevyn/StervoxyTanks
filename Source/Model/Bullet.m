@@ -25,6 +25,8 @@
   shape.friction = 0.5;
   shape.data = self;
   
+  targetRect.size.height *= 2;
+  
   //normal bullets bounce one time
   bouncesLeft = 1;
     
@@ -35,15 +37,26 @@
 -(BOOL)didCollideWith:(CPShape*)otherShape;
 {
   if([otherShape.data isKindOfClass:Tank.class]) return YES;
-  if(bouncesLeft > 0){
+  if(bouncesLeft == 0){    
+    //kill it
+    if([delegate respondsToSelector:@selector(bullet:hits:exploading:)])
+      [delegate bullet:self hits:otherShape exploading:YES];
+    return NO;
+  } else {
     //bounce
     bouncesLeft--;
+    if([delegate respondsToSelector:@selector(bullet:hits:exploading:)])
+      [delegate bullet:self hits:otherShape exploading:NO];
     return YES;
-  } else {
-    //kill it
-    //NSLog(@"KILL THE BULLET!");
-    return NO;
   }
+}
+
+-(void)draw;
+{
+  //calc angle
+  float angle = atan2(body.velocity.y, body.velocity.x);
+  body.angle = angle*180/M_PI;
+  [super draw];
 }
 
 @end

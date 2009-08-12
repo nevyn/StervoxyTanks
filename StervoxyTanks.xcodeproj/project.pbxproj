@@ -8,12 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		0504ACDA103239D700F0BCBB /* TCFakeAccelerometer.m in Sources */ = {isa = PBXBuildFile; fileRef = 0504ACD9103239D700F0BCBB /* TCFakeAccelerometer.m */; };
-		0504AD9810324D0500F0BCBB /* NSObject+SBJSON.m in Sources */ = {isa = PBXBuildFile; fileRef = 0504AD8D10324D0500F0BCBB /* NSObject+SBJSON.m */; };
-		0504AD9910324D0500F0BCBB /* NSString+SBJSON.m in Sources */ = {isa = PBXBuildFile; fileRef = 0504AD8F10324D0500F0BCBB /* NSString+SBJSON.m */; };
-		0504AD9A10324D0500F0BCBB /* SBJSON.m in Sources */ = {isa = PBXBuildFile; fileRef = 0504AD9110324D0500F0BCBB /* SBJSON.m */; };
-		0504AD9B10324D0500F0BCBB /* SBJsonBase.m in Sources */ = {isa = PBXBuildFile; fileRef = 0504AD9310324D0500F0BCBB /* SBJsonBase.m */; };
-		0504AD9C10324D0500F0BCBB /* SBJsonParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 0504AD9510324D0500F0BCBB /* SBJsonParser.m */; };
-		0504AD9D10324D0500F0BCBB /* SBJsonWriter.m in Sources */ = {isa = PBXBuildFile; fileRef = 0504AD9710324D0500F0BCBB /* SBJsonWriter.m */; };
 		05AEA74E1030949A007822B0 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 05AEA7451030949A007822B0 /* main.m */; };
 		05AEA74F1030949A007822B0 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 05AEA7461030949A007822B0 /* MainWindow.xib */; };
 		05AEA7501030949A007822B0 /* StervoxyTanksAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 05AEA7491030949A007822B0 /* StervoxyTanksAppDelegate.m */; };
@@ -76,6 +70,17 @@
 		216387701032186F0008D39F /* PhysicalObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 2163876F1032186F0008D39F /* PhysicalObject.m */; };
 		2163882A103220BF0008D39F /* Box.m in Sources */ = {isa = PBXBuildFile; fileRef = 21638829103220BF0008D39F /* Box.m */; };
 		21638854103222E20008D39F /* wall.png in Resources */ = {isa = PBXBuildFile; fileRef = 21638853103222E20008D39F /* wall.png */; };
+		21638A96103241CF0008D39F /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 21638A95103241CF0008D39F /* Default.png */; };
+		21638AA5103244150008D39F /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 21638AA4103244150008D39F /* icon.png */; };
+		21638ABE103247840008D39F /* explosion-1.png in Resources */ = {isa = PBXBuildFile; fileRef = 21638ABB103247840008D39F /* explosion-1.png */; };
+		21638ABF103247840008D39F /* explosion-2.png in Resources */ = {isa = PBXBuildFile; fileRef = 21638ABC103247840008D39F /* explosion-2.png */; };
+		21638AC0103247840008D39F /* explosion-3.png in Resources */ = {isa = PBXBuildFile; fileRef = 21638ABD103247840008D39F /* explosion-3.png */; };
+		21638AC3103247AD0008D39F /* Effect.m in Sources */ = {isa = PBXBuildFile; fileRef = 21638AC2103247AD0008D39F /* Effect.m */; };
+		21638AC6103248230008D39F /* ExplosionEffect.m in Sources */ = {isa = PBXBuildFile; fileRef = 21638AC5103248230008D39F /* ExplosionEffect.m */; };
+		21638D391032F93D0008D39F /* TankController.m in Sources */ = {isa = PBXBuildFile; fileRef = 21638D381032F93D0008D39F /* TankController.m */; };
+		21638DDB103301070008D39F /* AccelerometerTankController.m in Sources */ = {isa = PBXBuildFile; fileRef = 21638DDA103301070008D39F /* AccelerometerTankController.m */; };
+		21638DDE1033017B0008D39F /* AITankController.m in Sources */ = {isa = PBXBuildFile; fileRef = 21638DDD1033017B0008D39F /* AITankController.m */; };
+		21638E33103303960008D39F /* Game.m in Sources */ = {isa = PBXBuildFile; fileRef = 21638E32103303960008D39F /* Game.m */; };
 		28FD15000DC6FC520079059D /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 28FD14FF0DC6FC520079059D /* OpenGLES.framework */; };
 		28FD15080DC6FC5B0079059D /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 28FD15070DC6FC5B0079059D /* QuartzCore.framework */; };
 		D81E680110323D9000509B49 /* Component.m in Sources */ = {isa = PBXBuildFile; fileRef = D81E67FE10323D9000509B49 /* Component.m */; };
@@ -86,27 +91,14 @@
 		D81E681710323DA800509B49 /* Vector2.m in Sources */ = {isa = PBXBuildFile; fileRef = D81E680F10323DA800509B49 /* Vector2.m */; };
 		D81E681810323DA800509B49 /* Vector3.m in Sources */ = {isa = PBXBuildFile; fileRef = D81E681110323DA800509B49 /* Vector3.m */; };
 		D81E681910323DA800509B49 /* Vector4.m in Sources */ = {isa = PBXBuildFile; fileRef = D81E681310323DA800509B49 /* Vector4.m */; };
-		D81E687310324F0400509B49 /* Factory.m in Sources */ = {isa = PBXBuildFile; fileRef = D81E687210324F0400509B49 /* Factory.m */; };
-		D81E687910324F7B00509B49 /* MeshComponent.m in Sources */ = {isa = PBXBuildFile; fileRef = D81E687610324F7B00509B49 /* MeshComponent.m */; };
-		D81E687A10324F7B00509B49 /* PhysicsComponent.m in Sources */ = {isa = PBXBuildFile; fileRef = D81E687810324F7B00509B49 /* PhysicsComponent.m */; };
+		D81E697610330F2F00509B49 /* MeshComponent.m in Sources */ = {isa = PBXBuildFile; fileRef = D81E697010330F2F00509B49 /* MeshComponent.m */; };
+		D81E697710330F2F00509B49 /* PhysicsComponent.m in Sources */ = {isa = PBXBuildFile; fileRef = D81E697210330F2F00509B49 /* PhysicsComponent.m */; };
+		D81E697B10330F4900509B49 /* Factory.m in Sources */ = {isa = PBXBuildFile; fileRef = D81E697A10330F4900509B49 /* Factory.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		0504ACD8103239D700F0BCBB /* TCFakeAccelerometer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TCFakeAccelerometer.h; sourceTree = "<group>"; };
 		0504ACD9103239D700F0BCBB /* TCFakeAccelerometer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TCFakeAccelerometer.m; sourceTree = "<group>"; };
-		0504AD8B10324D0500F0BCBB /* JSON.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSON.h; sourceTree = "<group>"; };
-		0504AD8C10324D0500F0BCBB /* NSObject+SBJSON.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+SBJSON.h"; sourceTree = "<group>"; };
-		0504AD8D10324D0500F0BCBB /* NSObject+SBJSON.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+SBJSON.m"; sourceTree = "<group>"; };
-		0504AD8E10324D0500F0BCBB /* NSString+SBJSON.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+SBJSON.h"; sourceTree = "<group>"; };
-		0504AD8F10324D0500F0BCBB /* NSString+SBJSON.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+SBJSON.m"; sourceTree = "<group>"; };
-		0504AD9010324D0500F0BCBB /* SBJSON.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJSON.h; sourceTree = "<group>"; };
-		0504AD9110324D0500F0BCBB /* SBJSON.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBJSON.m; sourceTree = "<group>"; };
-		0504AD9210324D0500F0BCBB /* SBJsonBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJsonBase.h; sourceTree = "<group>"; };
-		0504AD9310324D0500F0BCBB /* SBJsonBase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBJsonBase.m; sourceTree = "<group>"; };
-		0504AD9410324D0500F0BCBB /* SBJsonParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJsonParser.h; sourceTree = "<group>"; };
-		0504AD9510324D0500F0BCBB /* SBJsonParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBJsonParser.m; sourceTree = "<group>"; };
-		0504AD9610324D0500F0BCBB /* SBJsonWriter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJsonWriter.h; sourceTree = "<group>"; };
-		0504AD9710324D0500F0BCBB /* SBJsonWriter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBJsonWriter.m; sourceTree = "<group>"; };
 		05AEA7451030949A007822B0 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		05AEA7461030949A007822B0 /* MainWindow.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainWindow.xib; sourceTree = "<group>"; };
 		05AEA7471030949A007822B0 /* StervoxyTanks_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StervoxyTanks_Prefix.pch; sourceTree = "<group>"; };
@@ -221,6 +213,22 @@
 		21638828103220BF0008D39F /* Box.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Box.h; sourceTree = "<group>"; };
 		21638829103220BF0008D39F /* Box.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Box.m; sourceTree = "<group>"; };
 		21638853103222E20008D39F /* wall.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = wall.png; sourceTree = "<group>"; };
+		21638A95103241CF0008D39F /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		21638AA4103244150008D39F /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon.png; sourceTree = "<group>"; };
+		21638ABB103247840008D39F /* explosion-1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "explosion-1.png"; sourceTree = "<group>"; };
+		21638ABC103247840008D39F /* explosion-2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "explosion-2.png"; sourceTree = "<group>"; };
+		21638ABD103247840008D39F /* explosion-3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "explosion-3.png"; sourceTree = "<group>"; };
+		21638AC1103247AD0008D39F /* Effect.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Effect.h; sourceTree = "<group>"; };
+		21638AC2103247AD0008D39F /* Effect.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Effect.m; sourceTree = "<group>"; };
+		21638AC4103248230008D39F /* ExplosionEffect.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExplosionEffect.h; sourceTree = "<group>"; };
+		21638AC5103248230008D39F /* ExplosionEffect.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ExplosionEffect.m; sourceTree = "<group>"; };
+		21638D371032F93D0008D39F /* TankController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TankController.h; sourceTree = "<group>"; };
+		21638D381032F93D0008D39F /* TankController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TankController.m; sourceTree = "<group>"; };
+		21638DDA103301070008D39F /* AccelerometerTankController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AccelerometerTankController.m; sourceTree = "<group>"; };
+		21638DDC1033017B0008D39F /* AITankController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AITankController.h; sourceTree = "<group>"; };
+		21638DDD1033017B0008D39F /* AITankController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AITankController.m; sourceTree = "<group>"; };
+		21638E31103303960008D39F /* Game.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Game.h; sourceTree = "<group>"; };
+		21638E32103303960008D39F /* Game.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Game.m; sourceTree = "<group>"; };
 		28FD14FF0DC6FC520079059D /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
 		28FD15070DC6FC5B0079059D /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		D81E67FD10323D9000509B49 /* Component.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Component.h; sourceTree = "<group>"; };
@@ -239,12 +247,12 @@
 		D81E681110323DA800509B49 /* Vector3.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Vector3.m; sourceTree = "<group>"; };
 		D81E681210323DA800509B49 /* Vector4.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Vector4.h; sourceTree = "<group>"; };
 		D81E681310323DA800509B49 /* Vector4.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Vector4.m; sourceTree = "<group>"; };
-		D81E687110324F0400509B49 /* Factory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Factory.h; sourceTree = "<group>"; };
-		D81E687210324F0400509B49 /* Factory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Factory.m; sourceTree = "<group>"; };
-		D81E687510324F7B00509B49 /* MeshComponent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MeshComponent.h; sourceTree = "<group>"; };
-		D81E687610324F7B00509B49 /* MeshComponent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MeshComponent.m; sourceTree = "<group>"; };
-		D81E687710324F7B00509B49 /* PhysicsComponent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhysicsComponent.h; sourceTree = "<group>"; };
-		D81E687810324F7B00509B49 /* PhysicsComponent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhysicsComponent.m; sourceTree = "<group>"; };
+		D81E696F10330F2F00509B49 /* MeshComponent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MeshComponent.h; sourceTree = "<group>"; };
+		D81E697010330F2F00509B49 /* MeshComponent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MeshComponent.m; sourceTree = "<group>"; };
+		D81E697110330F2F00509B49 /* PhysicsComponent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhysicsComponent.h; sourceTree = "<group>"; };
+		D81E697210330F2F00509B49 /* PhysicsComponent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhysicsComponent.m; sourceTree = "<group>"; };
+		D81E697910330F4900509B49 /* Factory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Factory.h; sourceTree = "<group>"; };
+		D81E697A10330F4900509B49 /* Factory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Factory.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -266,27 +274,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		0504AD8A10324D0500F0BCBB /* JSON */ = {
-			isa = PBXGroup;
-			children = (
-				0504AD8B10324D0500F0BCBB /* JSON.h */,
-				0504AD8C10324D0500F0BCBB /* NSObject+SBJSON.h */,
-				0504AD8D10324D0500F0BCBB /* NSObject+SBJSON.m */,
-				0504AD8E10324D0500F0BCBB /* NSString+SBJSON.h */,
-				0504AD8F10324D0500F0BCBB /* NSString+SBJSON.m */,
-				0504AD9010324D0500F0BCBB /* SBJSON.h */,
-				0504AD9110324D0500F0BCBB /* SBJSON.m */,
-				0504AD9210324D0500F0BCBB /* SBJsonBase.h */,
-				0504AD9310324D0500F0BCBB /* SBJsonBase.m */,
-				0504AD9410324D0500F0BCBB /* SBJsonParser.h */,
-				0504AD9510324D0500F0BCBB /* SBJsonParser.m */,
-				0504AD9610324D0500F0BCBB /* SBJsonWriter.h */,
-				0504AD9710324D0500F0BCBB /* SBJsonWriter.m */,
-			);
-			name = JSON;
-			path = Vendor/JSON;
-			sourceTree = "<group>";
-		};
 		05AEA7431030949A007822B0 /* Source */ = {
 			isa = PBXGroup;
 			children = (
@@ -325,14 +312,25 @@
 				216384191031A5E10008D39F /* Tank.m */,
 				216385BF1031C1590008D39F /* Level.h */,
 				216385C01031C1590008D39F /* Level.m */,
-				D81E687110324F0400509B49 /* Factory.h */,
-				D81E687210324F0400509B49 /* Factory.m */,
 				21638742103213630008D39F /* Bullet.h */,
 				21638743103213630008D39F /* Bullet.m */,
 				21638828103220BF0008D39F /* Box.h */,
 				21638829103220BF0008D39F /* Box.m */,
 				2163876E1032186F0008D39F /* PhysicalObject.h */,
 				2163876F1032186F0008D39F /* PhysicalObject.m */,
+				21638AC1103247AD0008D39F /* Effect.h */,
+				21638AC2103247AD0008D39F /* Effect.m */,
+				21638AC4103248230008D39F /* ExplosionEffect.h */,
+				21638AC5103248230008D39F /* ExplosionEffect.m */,
+				D81E697910330F4900509B49 /* Factory.h */,
+				D81E697A10330F4900509B49 /* Factory.m */,
+				21638D371032F93D0008D39F /* TankController.h */,
+				21638D381032F93D0008D39F /* TankController.m */,
+				21638DDA103301070008D39F /* AccelerometerTankController.m */,
+				21638DDC1033017B0008D39F /* AITankController.h */,
+				21638DDD1033017B0008D39F /* AITankController.m */,
+				21638E31103303960008D39F /* Game.h */,
+				21638E32103303960008D39F /* Game.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -356,10 +354,15 @@
 		05AEA755103094EA007822B0 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				21638ABB103247840008D39F /* explosion-1.png */,
+				21638ABC103247840008D39F /* explosion-2.png */,
+				21638ABD103247840008D39F /* explosion-3.png */,
 				21638853103222E20008D39F /* wall.png */,
 				2163874F103214E30008D39F /* bullet.png */,
+				21638A95103241CF0008D39F /* Default.png */,
 				2163841E1031A6AE0008D39F /* tank.png */,
 				05AEA756103094EA007822B0 /* StervoxyTanks-Info.plist */,
+				21638AA4103244150008D39F /* icon.png */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -521,7 +524,6 @@
 			children = (
 				05AEA7601030B308007822B0 /* AsyncSocket */,
 				05AEA7B01030B870007822B0 /* JAUtil */,
-				0504AD8A10324D0500F0BCBB /* JSON */,
 				216384321031AC770008D39F /* CoreGraphics.framework */,
 				28FD15070DC6FC5B0079059D /* QuartzCore.framework */,
 				28FD14FF0DC6FC520079059D /* OpenGLES.framework */,
@@ -535,12 +537,12 @@
 		D81E67FC10323D9000509B49 /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				D81E696F10330F2F00509B49 /* MeshComponent.h */,
+				D81E697010330F2F00509B49 /* MeshComponent.m */,
+				D81E697110330F2F00509B49 /* PhysicsComponent.h */,
+				D81E697210330F2F00509B49 /* PhysicsComponent.m */,
 				D81E67FD10323D9000509B49 /* Component.h */,
 				D81E67FE10323D9000509B49 /* Component.m */,
-				D81E687510324F7B00509B49 /* MeshComponent.h */,
-				D81E687610324F7B00509B49 /* MeshComponent.m */,
-				D81E687710324F7B00509B49 /* PhysicsComponent.h */,
-				D81E687810324F7B00509B49 /* PhysicsComponent.m */,
 				D81E67FF10323D9000509B49 /* PositionComponent.h */,
 				D81E680010323D9000509B49 /* PositionComponent.m */,
 			);
@@ -617,6 +619,11 @@
 				2163841F1031A6AE0008D39F /* tank.png in Resources */,
 				21638750103214E30008D39F /* bullet.png in Resources */,
 				21638854103222E20008D39F /* wall.png in Resources */,
+				21638A96103241CF0008D39F /* Default.png in Resources */,
+				21638AA5103244150008D39F /* icon.png in Resources */,
+				21638ABE103247840008D39F /* explosion-1.png in Resources */,
+				21638ABF103247840008D39F /* explosion-2.png in Resources */,
+				21638AC0103247840008D39F /* explosion-3.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -683,15 +690,15 @@
 				D81E681710323DA800509B49 /* Vector2.m in Sources */,
 				D81E681810323DA800509B49 /* Vector3.m in Sources */,
 				D81E681910323DA800509B49 /* Vector4.m in Sources */,
-				0504AD9810324D0500F0BCBB /* NSObject+SBJSON.m in Sources */,
-				0504AD9910324D0500F0BCBB /* NSString+SBJSON.m in Sources */,
-				0504AD9A10324D0500F0BCBB /* SBJSON.m in Sources */,
-				0504AD9B10324D0500F0BCBB /* SBJsonBase.m in Sources */,
-				0504AD9C10324D0500F0BCBB /* SBJsonParser.m in Sources */,
-				0504AD9D10324D0500F0BCBB /* SBJsonWriter.m in Sources */,
-				D81E687310324F0400509B49 /* Factory.m in Sources */,
-				D81E687910324F7B00509B49 /* MeshComponent.m in Sources */,
-				D81E687A10324F7B00509B49 /* PhysicsComponent.m in Sources */,
+				21638AC3103247AD0008D39F /* Effect.m in Sources */,
+				21638AC6103248230008D39F /* ExplosionEffect.m in Sources */,
+				21638D391032F93D0008D39F /* TankController.m in Sources */,
+				21638DDB103301070008D39F /* AccelerometerTankController.m in Sources */,
+				21638DDE1033017B0008D39F /* AITankController.m in Sources */,
+				21638E33103303960008D39F /* Game.m in Sources */,
+				D81E697610330F2F00509B49 /* MeshComponent.m in Sources */,
+				D81E697710330F2F00509B49 /* PhysicsComponent.m in Sources */,
+				D81E697B10330F4900509B49 /* Factory.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
