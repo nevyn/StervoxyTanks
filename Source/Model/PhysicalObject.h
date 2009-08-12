@@ -16,11 +16,13 @@
   CPBody *body;
   CPShape *shape;  
   CGRect targetRect;
+  id delegate;
 }
 
 @property (nonatomic, readonly) CPShape *shape;
 @property (nonatomic, readonly) CPBody *body;
 @property (nonatomic, retain) Texture2D *texture;
+@property (nonatomic, assign) id delegate;
 
 -(id)init;
 

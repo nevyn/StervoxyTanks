@@ -10,6 +10,8 @@
 
 #import "Bullet.h"
 #import "Box.h"
+#import "Effect.h"
+#import "ExplosionEffect.h"
 
 @implementation Level
 
@@ -27,10 +29,13 @@
   
   bullets = [[NSMutableArray alloc] init];
   
+  effects = [[NSMutableArray alloc] init];
+  
   tank = [[Tank alloc] init];
   [tank addToSpace:space];
   
   [self loadLevel:1];
+
   
   return self;
 }
@@ -42,6 +47,7 @@
   [staticBody release];
   [staticObjects release];
   [space release];
+  [effects release];
   [super dealloc];
 }
 
@@ -80,6 +86,11 @@
 -(void)update;
 {
   [space stepWithDelta:0.4f];
+  for(Effect *effect in [effects copy]){
+    if(! [effect updateWithDelta:1/60.0]){
+      [effects removeObject:effect];
+    }
+  }
 }
 
 -(void)draw;
@@ -96,6 +107,9 @@
   for(PhysicalObject *obj in bullets){
     [obj draw];
   }
+  
+  for(Effect *effect in effects)
+    [effect draw];
 }
 
 -(void)shootAt:(CGPoint)point;
@@ -110,6 +124,7 @@
   float speed = 0.1;
   bullet.body.velocity = cpv(speed * cos(angle), speed * sin(angle));
   bullet.shape.elasticity = 1.0;
+  bullet.delegate = self;
   
   [bullet addToSpace:space];
   [bullets addObject:bullet];
@@ -127,5 +142,18 @@
   //yes, handle collision please
   return YES;
 }
+
+-(void)bullet:(Bullet*)bullet hits:(CPShape*)otherShape exploading:(BOOL)exploads;
+{
+  if(exploads){
+    [bullet removeFromSpace:space];
+    [bullets removeObject:bullet];
+    cpVect p = bullet.body.position;
+    Effect *fx = [[ExplosionEffect alloc] initAt:CGPointMake(p.x, p.y)];
+    [effects addObject:fx];
+    [fx release];
+  }
+}
+
 
 @end

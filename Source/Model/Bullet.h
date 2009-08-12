@@ -20,3 +20,10 @@
 
 
 @end
+
+@interface NSObject (BulletDelegate)
+
+-(void)bullet:(Bullet*)bullet hits:(CPShape*)shape exploading:(BOOL)exploads;
+
+@end
+

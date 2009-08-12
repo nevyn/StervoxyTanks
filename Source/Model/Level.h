@@ -23,6 +23,9 @@
   NSMutableArray *bullets;
   
   BOOL somethingCollided;
+  
+  NSMutableArray *effects;
+  
 }
 
 @property (readonly, nonatomic) Tank *tank;
@@ -36,5 +39,6 @@
 -(void)loadLevel:(int)levelNumber;
 
 -(void)shootAt:(CGPoint)point;
+
 
 @end
