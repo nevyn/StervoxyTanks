@@ -7,7 +7,7 @@
 //
 
 #import "GameController.h"
-
+#import "Factory.h"
 
 @implementation GameController
 @synthesize gameView;
@@ -22,9 +22,10 @@
     [super viewDidLoad];
 		gameView.animationInterval = 1./60.;
 		[gameView startAnimation];
-
+		
+		[Factory entityFromArchetype:@"Tank"];
+		
 }
-
 
 - (void)dealloc {
 	NSLog(@"Dealloc game controller");

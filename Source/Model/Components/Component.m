@@ -25,9 +25,11 @@ static NSMutableArray *componentsIn(Class klass) {
 
 @implementation Component
 @synthesize entityID;
--(id)initWithDictionary:(NSDictionary*)props;
+-(id)initWithDictionary:(NSDictionary*)props entityID:(uint64_t)eid_;
 {
 	if( ![super init] ) return nil;
+	
+	entityID = eid_;
 	
 	[componentsIn([self class]) addObject:self];
 	

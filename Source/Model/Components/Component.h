@@ -16,7 +16,7 @@
 }
 @property (readonly) uint64_t entityID;
 
--(id)initWithDictionary:(NSDictionary*)props;
+-(id)initWithDictionary:(NSDictionary*)props entityID:(uint64_t)eid_;
 // Call these from subclasses!
 +(NSArray*)components;
 +(id)componentForEntityID:(uint64_t)eid;

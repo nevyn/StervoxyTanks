@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		0504ACDA103239D700F0BCBB /* TCFakeAccelerometer.m in Sources */ = {isa = PBXBuildFile; fileRef = 0504ACD9103239D700F0BCBB /* TCFakeAccelerometer.m */; };
 		0504AE741033104E00F0BCBB /* STNetwork.m in Sources */ = {isa = PBXBuildFile; fileRef = 0504AE731033104E00F0BCBB /* STNetwork.m */; };
+		0504AF0C1033177000F0BCBB /* Tank.json in Resources */ = {isa = PBXBuildFile; fileRef = 0504AEDA103316A300F0BCBB /* Tank.json */; };
 		05AEA74E1030949A007822B0 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 05AEA7451030949A007822B0 /* main.m */; };
 		05AEA74F1030949A007822B0 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 05AEA7461030949A007822B0 /* MainWindow.xib */; };
 		05AEA7501030949A007822B0 /* StervoxyTanksAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 05AEA7491030949A007822B0 /* StervoxyTanksAppDelegate.m */; };
@@ -108,6 +109,7 @@
 		0504ACD9103239D700F0BCBB /* TCFakeAccelerometer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TCFakeAccelerometer.m; sourceTree = "<group>"; };
 		0504AE721033104E00F0BCBB /* STNetwork.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STNetwork.h; sourceTree = "<group>"; };
 		0504AE731033104E00F0BCBB /* STNetwork.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STNetwork.m; sourceTree = "<group>"; };
+		0504AEDA103316A300F0BCBB /* Tank.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Tank.json; sourceTree = "<group>"; };
 		05AEA7451030949A007822B0 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		05AEA7461030949A007822B0 /* MainWindow.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainWindow.xib; sourceTree = "<group>"; };
 		05AEA7471030949A007822B0 /* StervoxyTanks_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StervoxyTanks_Prefix.pch; sourceTree = "<group>"; };
@@ -385,6 +387,7 @@
 				2163841E1031A6AE0008D39F /* tank.png */,
 				05AEA756103094EA007822B0 /* StervoxyTanks-Info.plist */,
 				21638AA4103244150008D39F /* icon.png */,
+				0504AEDA103316A300F0BCBB /* Tank.json */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -670,6 +673,7 @@
 				21638ABE103247840008D39F /* explosion-1.png in Resources */,
 				21638ABF103247840008D39F /* explosion-2.png in Resources */,
 				21638AC0103247840008D39F /* explosion-3.png in Resources */,
+				0504AF0C1033177000F0BCBB /* Tank.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

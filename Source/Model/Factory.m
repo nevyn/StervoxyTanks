@@ -9,9 +9,11 @@
 #import "Factory.h"
 #import "SBJsonParser.h"
 
+static uint64_t id_incr = 0;
+
 @implementation Factory
 
-- (int)entityNamed:(NSString *)name;
++ (int)entityFromArchetype:(NSString *)name;
 {
 	// Öppna filen
 	
@@ -36,17 +38,29 @@
 	 
 	 
 	*/
+	int this_id = ++id_incr;
 	
-	NSString *json = @"[ { \"type\" : \"PositionComponent\", \"data\" : { \"position\" : [ 2.4, 1.99 ] } } ]";
+	NSString *jsonPath = [[NSBundle mainBundle] pathForResource:name ofType:@"json"];
+	NSString *json = [NSString stringWithContentsOfFile:jsonPath];
+	if(!json) {
+		NSLog(@"-[Factory entityNamed:]: No such archetype: %@", name);
+		return this_id;
+	}
 	
 	NSMutableArray *archetype = [[[SBJsonParser new] autorelease] objectWithString:json];
 	
 	for(id componentInfo in archetype) {
-		Class componentClass = NSClassFromString([componentInfo objectForKey:@"type"]);
-		if(componentClass == nil) continue;
+		NSString *componentName = [componentInfo objectForKey:@"type"];
+		Class componentClass = NSClassFromString(componentName);
+		if(componentClass == nil) {
+			NSLog(@"Couldn't create component %@ for %ld", componentName, this_id);
+			continue;
+		}
 		
-		[[componentClass alloc] initFromDictionary:[componentInfo objectForKey:@"data"]];
+		[[componentClass alloc] initWithDictionary:[componentInfo objectForKey:@"data"]
+																														 entityID:this_id];
 	}
+	return this_id;
 }
 
 @end
