@@ -11,6 +11,7 @@
 #import "CPChipmunk.h"
 #import "PhysicalObject.h"
 #import "TankController.h"
+@class Bullet;
 
 @interface Tank : PhysicalObject <UIAccelerometerDelegate, CPBodyDelegate> {
   
@@ -33,5 +34,7 @@
 -(void)setHeading:(CGPoint)headingVector;
 
 -(void)shootAt:(CGPoint)point;
+
+-(void)destroyedByBullet:(Bullet*)bullet;
 
 @end

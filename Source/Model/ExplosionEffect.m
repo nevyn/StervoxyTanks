@@ -27,6 +27,10 @@ static NSArray *superSecretStaticTexturesArray;
 
 -(BOOL)updateWithDelta:(float)dtime;
 {
+  if(delay > 0.0) {
+    delay -= dtime;
+    return YES;
+  }
   life += dtime;
   if(life >= 0.07){
     life = 0;
@@ -41,7 +45,8 @@ static NSArray *superSecretStaticTexturesArray;
 
 -(void)draw;
 {
-  [currentTexture drawInRect:CGRectMake(point.x-0.1, point.y-0.1, 0.2, 0.2)];
+  if(delay <= 0.0)
+    [currentTexture drawInRect:CGRectMake(point.x-0.1, point.y-0.1, 0.2, 0.2)];
 }
 
 @end

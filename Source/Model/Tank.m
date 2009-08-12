@@ -9,6 +9,8 @@
 #import "Tank.h"
 #import "Game.h"
 
+#import "Bullet.h"
+
 @implementation Tank
 
 @synthesize controller;
@@ -106,9 +108,16 @@
 
 -(void)shootAt:(CGPoint)point;
 {
+  NSLog(@"%@ is fiering tha lazors!", self);
   CGPoint pFrom = CGPointMake(body.position.x, body.position.y);
   
-  [[Game sharedGame].currentLevel createBulletAt:pFrom heading:point];
+  Bullet *bullet = [[Game sharedGame].currentLevel createBulletAt:pFrom heading:point];
+  bullet.popper = self;
+}
+
+-(void)destroyedByBullet:(Bullet*)bullet;
+{
+  
 }
 
 

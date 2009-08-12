@@ -8,6 +8,10 @@
 
 #import "PhysicalObject.h"
 
+@interface NSObject (PhysicalObjectDelegate)
+-(BOOL)physicalObject:(PhysicalObject*)object didCollideWith:(CPShape*)otherShape;
+@end
+
 
 @implementation PhysicalObject
 

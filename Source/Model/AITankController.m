@@ -10,21 +10,18 @@
 #import "Tank.h"
 #import "Game.h"
 #import "Level.h"
-
-float frand(){
-  return (rand()%10000000) / 10000000.0;
-}
+#import "cutils.h"
 
 @implementation AITankController
 
 -(void)updateTank:(Tank*)tank;
 {
   static float t = 0;
-  static float nextShot = -1;
+  static float nextShot = 3.0;
   
   nextShot -= 1/60.0;
   if(nextShot <= 0){
-    nextShot = frand()*3;
+    nextShot = frand()*3 + 1;
     NSLog(@"next shot in %f", nextShot);
     Tank *playerTank = [Game sharedGame].currentLevel.playerTank;
     CGPoint target = CGPointMake(playerTank.body.position.x, playerTank.body.position.y);

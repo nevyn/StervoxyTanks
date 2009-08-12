@@ -17,5 +17,4 @@
   float life;
 }
 
-
 @end

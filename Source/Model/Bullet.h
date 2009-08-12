@@ -12,12 +12,19 @@
 #import "Texture2D.h"
 #import "PhysicalObject.h"
 
+@class Tank;
+
 @interface Bullet : PhysicalObject {
-
+  float life;
   int bouncesLeft;
+  BOOL canHitSelf; //YES after first bounce
+  Tank *popper; //the tank that fired the bullet
 }
-@property (readonly, nonatomic) int bouncesLeft;
 
+@property (readonly, nonatomic) int bouncesLeft;
+@property (nonatomic, retain) Tank *popper;
+
+-(void)destroyedTank:(Tank*)tank;
 
 @end
 

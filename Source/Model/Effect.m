@@ -11,6 +11,8 @@
 
 @implementation Effect
 
+@synthesize delay;
+
 
 -(id)initAt:(CGPoint)point_;
 {

@@ -11,7 +11,10 @@
 
 @interface Effect : NSObject {
   CGPoint point;
+  float delay;
 }
+
+@property (nonatomic) float delay;
 
 -(id)initAt:(CGPoint)point;
 

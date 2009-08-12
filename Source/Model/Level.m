@@ -14,6 +14,7 @@
 #import "ExplosionEffect.h"
 #import "AITankController.h"
 #import "TankController.h"
+#import "cutils.h"
 
 @implementation Level
 
@@ -128,7 +129,7 @@
     [effect draw];
 }
 
--(void)createBulletAt:(CGPoint)pFrom heading:(CGPoint)pTo;
+-(Bullet*)createBulletAt:(CGPoint)pFrom heading:(CGPoint)pTo;
 {
   float angle = atan2(pTo.y-pFrom.y, pTo.x-pFrom.y);
   
@@ -142,11 +143,17 @@
   
   [bullet addToSpace:space];
   [bullets addObject:bullet];
+  return bullet;
 }
 
 //The collision delegate method
 -(BOOL)shapesDidCollide:(CPShape*)shape1 with:(CPShape*)shape2 contacts:(NSArray*)contacts normalCoefficient:(cpFloat)normal_coef;
 {
+  if([shape1.data isKindOfClass:Bullet.class] && [shape2.data isKindOfClass:Bullet.class]){
+    [self removeBullet:(Bullet*)shape1.data spawnEffect:1];
+    [self removeBullet:(Bullet*)shape2.data spawnEffect:1];
+  }
+  
   if([shape1.data isKindOfClass:PhysicalObject.class])
     if(! [((PhysicalObject*)shape1.data) didCollideWith:shape2]) return NO;
   if([shape2.data isKindOfClass:PhysicalObject.class])
@@ -159,14 +166,59 @@
 
 -(void)bullet:(Bullet*)bullet hits:(CPShape*)otherShape exploading:(BOOL)exploads;
 {
-  if(exploads){
+  if(exploads)
+    [self removeBullet:bullet spawnEffect:1];
+}
+
+-(void)tank:(Tank*)tank wasDestroyedByBullet:(Bullet*)bullet;
+{
+  NSLog(@"%@ was destroyed by %@", tank, bullet);
+  [self removeBullet:bullet spawnEffect:2];
+  
+  [tank removeFromSpace:space];
+  [tanks removeObject:tank];
+}
+
+-(ExplosionEffect*)createExplosionAt:(CGPoint)point;
+{
+  ExplosionEffect *fx = [[ExplosionEffect alloc] initAt:point];
+  [effects addObject:fx];
+  [fx release];
+  return fx;
+}
+
+-(void)createBigExplosionAt:(CGPoint)p;
+{
+  float spread = 0.1;
+  __block float d = 0;
+  float (^delay)() = ^{
+    return d+=frand()*0.4;
+  };
+  Effect *e;
+  e = [self createExplosionAt:CGPointMake(p.x, p.y)];
+  e.delay = delay();
+  
+  e = [self createExplosionAt:CGPointMake(p.x+frand()*spread, p.y+frand()*spread)];
+  e.delay = delay();
+
+  e = [self createExplosionAt:CGPointMake(p.x+frand()*spread, p.y+frand()*spread)];
+  e.delay = delay();
+  
+  e = [self createExplosionAt:CGPointMake(p.x+frand()*spread, p.y+frand()*spread)];
+  e.delay = delay();
+}
+
+-(void)removeBullet:(Bullet*)bullet spawnEffect:(int)spawnEffect;
+{
+  if(spawnEffect){
     [bullet removeFromSpace:space];
     [bullets removeObject:bullet];
     cpVect p = bullet.body.position;
-    Effect *fx = [[ExplosionEffect alloc] initAt:CGPointMake(p.x, p.y)];
-    [effects addObject:fx];
-    [fx release];
-  }
+    if(spawnEffect == 1)
+      [self createExplosionAt:CGPointMake(p.x, p.y)];
+    if(spawnEffect == 2)
+      [self createBigExplosionAt:CGPointMake(p.x, p.y)];
+  }  
 }
 
 

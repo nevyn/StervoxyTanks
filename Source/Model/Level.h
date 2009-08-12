@@ -13,7 +13,7 @@
 #import "Bullet.h"
 
 
-@interface Level : NSObject<PhysicalObjectDelegate, BulletDelegate> {
+@interface Level : NSObject {
   
   NSMutableArray *staticObjects;
   CPBody *staticBody;
@@ -41,10 +41,13 @@
 
 -(void)loadLevel:(int)levelNumber;
 
--(void)createBulletAt:(CGPoint)pFrom heading:(CGPoint)pTo;
+-(Bullet*)createBulletAt:(CGPoint)pFrom heading:(CGPoint)pTo;
 
 //Delegate stuff
 -(BOOL)shapesDidCollide:(CPShape*)shape1 with:(CPShape*)shape2 contacts:(NSArray*)contacts normalCoefficient:(cpFloat)normal_coef;
 -(void)bullet:(Bullet*)bullet hits:(CPShape*)otherShape exploading:(BOOL)exploads;
+
+-(void)tank:(Tank*)tank wasDestroyedByBullet:(Bullet*)bullet;
+-(void)removeBullet:(Bullet*)bullet spawnEffect:(int)spawnEffect; //0=none; 1=explosion; 2=bigExplosion
 
 @end
