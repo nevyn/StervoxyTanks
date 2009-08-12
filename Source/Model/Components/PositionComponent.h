@@ -8,11 +8,14 @@
 
 #import "Component.h"
 #import "Vector2.h"
+#import "JSON.h"
 
 @interface PositionComponent : Component {
 	Vector2 *position;
 }
 
 @property (copy) Vector2 *position;
+
+- (id)initFromJSON:(NSString *)rawJson;
 
 @end

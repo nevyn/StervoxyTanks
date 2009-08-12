@@ -86,6 +86,9 @@
 		D81E681710323DA800509B49 /* Vector2.m in Sources */ = {isa = PBXBuildFile; fileRef = D81E680F10323DA800509B49 /* Vector2.m */; };
 		D81E681810323DA800509B49 /* Vector3.m in Sources */ = {isa = PBXBuildFile; fileRef = D81E681110323DA800509B49 /* Vector3.m */; };
 		D81E681910323DA800509B49 /* Vector4.m in Sources */ = {isa = PBXBuildFile; fileRef = D81E681310323DA800509B49 /* Vector4.m */; };
+		D81E687310324F0400509B49 /* Factory.m in Sources */ = {isa = PBXBuildFile; fileRef = D81E687210324F0400509B49 /* Factory.m */; };
+		D81E687910324F7B00509B49 /* MeshComponent.m in Sources */ = {isa = PBXBuildFile; fileRef = D81E687610324F7B00509B49 /* MeshComponent.m */; };
+		D81E687A10324F7B00509B49 /* PhysicsComponent.m in Sources */ = {isa = PBXBuildFile; fileRef = D81E687810324F7B00509B49 /* PhysicsComponent.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -236,6 +239,12 @@
 		D81E681110323DA800509B49 /* Vector3.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Vector3.m; sourceTree = "<group>"; };
 		D81E681210323DA800509B49 /* Vector4.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Vector4.h; sourceTree = "<group>"; };
 		D81E681310323DA800509B49 /* Vector4.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Vector4.m; sourceTree = "<group>"; };
+		D81E687110324F0400509B49 /* Factory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Factory.h; sourceTree = "<group>"; };
+		D81E687210324F0400509B49 /* Factory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Factory.m; sourceTree = "<group>"; };
+		D81E687510324F7B00509B49 /* MeshComponent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MeshComponent.h; sourceTree = "<group>"; };
+		D81E687610324F7B00509B49 /* MeshComponent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MeshComponent.m; sourceTree = "<group>"; };
+		D81E687710324F7B00509B49 /* PhysicsComponent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhysicsComponent.h; sourceTree = "<group>"; };
+		D81E687810324F7B00509B49 /* PhysicsComponent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhysicsComponent.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -316,6 +325,8 @@
 				216384191031A5E10008D39F /* Tank.m */,
 				216385BF1031C1590008D39F /* Level.h */,
 				216385C01031C1590008D39F /* Level.m */,
+				D81E687110324F0400509B49 /* Factory.h */,
+				D81E687210324F0400509B49 /* Factory.m */,
 				21638742103213630008D39F /* Bullet.h */,
 				21638743103213630008D39F /* Bullet.m */,
 				21638828103220BF0008D39F /* Box.h */,
@@ -526,6 +537,10 @@
 			children = (
 				D81E67FD10323D9000509B49 /* Component.h */,
 				D81E67FE10323D9000509B49 /* Component.m */,
+				D81E687510324F7B00509B49 /* MeshComponent.h */,
+				D81E687610324F7B00509B49 /* MeshComponent.m */,
+				D81E687710324F7B00509B49 /* PhysicsComponent.h */,
+				D81E687810324F7B00509B49 /* PhysicsComponent.m */,
 				D81E67FF10323D9000509B49 /* PositionComponent.h */,
 				D81E680010323D9000509B49 /* PositionComponent.m */,
 			);
@@ -674,6 +689,9 @@
 				0504AD9B10324D0500F0BCBB /* SBJsonBase.m in Sources */,
 				0504AD9C10324D0500F0BCBB /* SBJsonParser.m in Sources */,
 				0504AD9D10324D0500F0BCBB /* SBJsonWriter.m in Sources */,
+				D81E687310324F0400509B49 /* Factory.m in Sources */,
+				D81E687910324F7B00509B49 /* MeshComponent.m in Sources */,
+				D81E687A10324F7B00509B49 /* PhysicsComponent.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

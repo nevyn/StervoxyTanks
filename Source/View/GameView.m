@@ -7,6 +7,7 @@
 //
 
 #import "GameView.h"
+#import "PositionComponent.h"
 
 @implementation GameView
 @synthesize level;
@@ -17,6 +18,8 @@
   [CPChipmunk initChipmunk];
 
   level = [[Level alloc] init];
+	
+	[[PositionComponent alloc] initFromJSON:@"Hej"];
   
   return self;
 }
