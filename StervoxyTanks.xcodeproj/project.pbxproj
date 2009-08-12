@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		0504ACDA103239D700F0BCBB /* TCFakeAccelerometer.m in Sources */ = {isa = PBXBuildFile; fileRef = 0504ACD9103239D700F0BCBB /* TCFakeAccelerometer.m */; };
+		0504AE741033104E00F0BCBB /* STNetwork.m in Sources */ = {isa = PBXBuildFile; fileRef = 0504AE731033104E00F0BCBB /* STNetwork.m */; };
 		05AEA74E1030949A007822B0 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 05AEA7451030949A007822B0 /* main.m */; };
 		05AEA74F1030949A007822B0 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 05AEA7461030949A007822B0 /* MainWindow.xib */; };
 		05AEA7501030949A007822B0 /* StervoxyTanksAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 05AEA7491030949A007822B0 /* StervoxyTanksAppDelegate.m */; };
@@ -99,6 +100,8 @@
 /* Begin PBXFileReference section */
 		0504ACD8103239D700F0BCBB /* TCFakeAccelerometer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TCFakeAccelerometer.h; sourceTree = "<group>"; };
 		0504ACD9103239D700F0BCBB /* TCFakeAccelerometer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TCFakeAccelerometer.m; sourceTree = "<group>"; };
+		0504AE721033104E00F0BCBB /* STNetwork.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STNetwork.h; sourceTree = "<group>"; };
+		0504AE731033104E00F0BCBB /* STNetwork.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STNetwork.m; sourceTree = "<group>"; };
 		05AEA7451030949A007822B0 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		05AEA7461030949A007822B0 /* MainWindow.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainWindow.xib; sourceTree = "<group>"; };
 		05AEA7471030949A007822B0 /* StervoxyTanks_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StervoxyTanks_Prefix.pch; sourceTree = "<group>"; };
@@ -390,6 +393,8 @@
 		05AEA7831030B63C007822B0 /* Network */ = {
 			isa = PBXGroup;
 			children = (
+				0504AE721033104E00F0BCBB /* STNetwork.h */,
+				0504AE731033104E00F0BCBB /* STNetwork.m */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -699,6 +704,7 @@
 				D81E697610330F2F00509B49 /* MeshComponent.m in Sources */,
 				D81E697710330F2F00509B49 /* PhysicsComponent.m in Sources */,
 				D81E697B10330F4900509B49 /* Factory.m in Sources */,
+				0504AE741033104E00F0BCBB /* STNetwork.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

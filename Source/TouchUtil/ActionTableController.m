@@ -13,12 +13,22 @@
 @property (readwrite, copy) NSArray *rows;
 @end
 
+@interface TableAction ()
+@property (readwrite, copy) NSString *name;
+@property (readwrite, assign) ActionGroup *group;
+-(void)runFrom:(ActionTableController*)atc;
+@end
+
 
 @interface BlockAction ()
-@property (readwrite, copy) NSString *name;
 @property (readwrite, copy) ActionBlock block;
-@property (readwrite, assign) ActionGroup *group;
 @end
+
+@interface TargetAction ()
+@property (readwrite, assign) id target;
+@property (readwrite, assign) SEL action;
+@end
+
 
 
 @implementation ActionTableController
@@ -70,10 +80,9 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath;
 {
 	ActionGroup *group = [self.hierarchy objectAtIndex:[indexPath indexAtPosition:0]];
-	BlockAction *action = [[group rows] objectAtIndex:[indexPath indexAtPosition:1]];
+	TableAction *action = [[group rows] objectAtIndex:[indexPath indexAtPosition:1]];
 	
-	if(action.block)
-		action.block(action, self);
+	[action runFrom:self];
 }
 
 
@@ -97,9 +106,17 @@
 }
 @end
 
+@implementation TableAction
+@synthesize name, group;
+-(void)runFrom:(ActionTableController*)atc;
+{
+
+}
+@end
+
 
 @implementation BlockAction
-@synthesize name, block, group;
+@synthesize block;
 +(BlockAction*)actionNamed:(NSString*)name_ block:(ActionBlock)block_;
 {
 	return [[[[self class] alloc] initWithName:name_ block:block_] autorelease];
@@ -110,4 +127,30 @@
 	self.name = name_; self.block = block_;
 	return self;
 }
+-(void)runFrom:(ActionTableController*)atc;
+{
+	if(block)
+		block(self, atc);
+}
+@end
+
+@implementation TargetAction
+@synthesize target, action;
++(TargetAction*)actionNamed:(NSString*)name_ target:(id)target_ action:(SEL)action_;
+{
+	return [[[[self class] alloc] initWithName:name_ target:target_ action:action_] autorelease];
+}
+-(id)initWithName:(NSString*)name_ target:(id)target_ action:(SEL)action_;
+{
+	if(! [super init] ) return nil;
+	self.name = name_;
+	self.target = target_;
+	self.action = action_;
+	return self;
+}
+-(void)runFrom:(ActionTableController*)atc;
+{
+	[target performSelector:action withObject:atc withObject:self];
+}
+
 @end

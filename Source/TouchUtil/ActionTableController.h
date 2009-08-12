@@ -30,15 +30,32 @@
 @class BlockAction;
 typedef void(^ActionBlock)(BlockAction *what, ActionTableController *controller);
 
-
-@interface BlockAction : NSObject {
+@interface TableAction : NSObject {
 	NSString *name;
-	ActionBlock block; 
 	ActionGroup *group;
+
+}
+@property (readonly, copy) NSString *name;
+@property (readonly, assign) ActionGroup *group;
+@end
+
+@interface BlockAction : TableAction {
+	ActionBlock block; 
 }
 +(BlockAction*)actionNamed:(NSString*)name block:(ActionBlock)block_;
 -(id)initWithName:(NSString*)name block:(ActionBlock)block_;
-@property (readonly, copy) NSString *name;
 @property (readonly, copy) ActionBlock block;
-@property (readonly, assign) ActionGroup *group;
 @end
+
+
+@interface TargetAction : TableAction
+{
+	id target;
+	SEL action;
+}
+@property (readonly, assign) id target;
+@property (readonly, assign) SEL action;
++(TargetAction*)actionNamed:(NSString*)name target:(id)target_ action:(SEL)action_;
+-(id)initWithName:(NSString*)name target:(id)target_ action:(SEL)action_;
+@end
+
