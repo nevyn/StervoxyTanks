@@ -70,6 +70,8 @@
 		216387701032186F0008D39F /* PhysicalObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 2163876F1032186F0008D39F /* PhysicalObject.m */; };
 		2163882A103220BF0008D39F /* Box.m in Sources */ = {isa = PBXBuildFile; fileRef = 21638829103220BF0008D39F /* Box.m */; };
 		21638854103222E20008D39F /* wall.png in Resources */ = {isa = PBXBuildFile; fileRef = 21638853103222E20008D39F /* wall.png */; };
+		21638A96103241CF0008D39F /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 21638A95103241CF0008D39F /* Default.png */; };
+		21638AA5103244150008D39F /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 21638AA4103244150008D39F /* icon.png */; };
 		28FD15000DC6FC520079059D /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 28FD14FF0DC6FC520079059D /* OpenGLES.framework */; };
 		28FD15080DC6FC5B0079059D /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 28FD15070DC6FC5B0079059D /* QuartzCore.framework */; };
 		D81E680110323D9000509B49 /* Component.m in Sources */ = {isa = PBXBuildFile; fileRef = D81E67FE10323D9000509B49 /* Component.m */; };
@@ -199,6 +201,8 @@
 		21638828103220BF0008D39F /* Box.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Box.h; sourceTree = "<group>"; };
 		21638829103220BF0008D39F /* Box.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Box.m; sourceTree = "<group>"; };
 		21638853103222E20008D39F /* wall.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = wall.png; sourceTree = "<group>"; };
+		21638A95103241CF0008D39F /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		21638AA4103244150008D39F /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon.png; sourceTree = "<group>"; };
 		28FD14FF0DC6FC520079059D /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
 		28FD15070DC6FC5B0079059D /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		D81E67FD10323D9000509B49 /* Component.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Component.h; sourceTree = "<group>"; };
@@ -307,8 +311,10 @@
 			children = (
 				21638853103222E20008D39F /* wall.png */,
 				2163874F103214E30008D39F /* bullet.png */,
+				21638A95103241CF0008D39F /* Default.png */,
 				2163841E1031A6AE0008D39F /* tank.png */,
 				05AEA756103094EA007822B0 /* StervoxyTanks-Info.plist */,
+				21638AA4103244150008D39F /* icon.png */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -561,6 +567,8 @@
 				2163841F1031A6AE0008D39F /* tank.png in Resources */,
 				21638750103214E30008D39F /* bullet.png in Resources */,
 				21638854103222E20008D39F /* wall.png in Resources */,
+				21638A96103241CF0008D39F /* Default.png in Resources */,
+				21638AA5103244150008D39F /* icon.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
