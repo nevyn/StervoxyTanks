@@ -41,7 +41,7 @@
     return YES;
   } else {
     //kill it
-    NSLog(@"KILL THE BULLET!");
+    //NSLog(@"KILL THE BULLET!");
     return NO;
   }
 }
