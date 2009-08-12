@@ -72,6 +72,14 @@
 		21638854103222E20008D39F /* wall.png in Resources */ = {isa = PBXBuildFile; fileRef = 21638853103222E20008D39F /* wall.png */; };
 		28FD15000DC6FC520079059D /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 28FD14FF0DC6FC520079059D /* OpenGLES.framework */; };
 		28FD15080DC6FC5B0079059D /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 28FD15070DC6FC5B0079059D /* QuartzCore.framework */; };
+		D81E680110323D9000509B49 /* Component.m in Sources */ = {isa = PBXBuildFile; fileRef = D81E67FE10323D9000509B49 /* Component.m */; };
+		D81E680210323D9000509B49 /* PositionComponent.m in Sources */ = {isa = PBXBuildFile; fileRef = D81E680010323D9000509B49 /* PositionComponent.m */; };
+		D81E681410323DA800509B49 /* Frustum.m in Sources */ = {isa = PBXBuildFile; fileRef = D81E680910323DA800509B49 /* Frustum.m */; };
+		D81E681510323DA800509B49 /* Matrix.m in Sources */ = {isa = PBXBuildFile; fileRef = D81E680B10323DA800509B49 /* Matrix.m */; };
+		D81E681610323DA800509B49 /* Plane.m in Sources */ = {isa = PBXBuildFile; fileRef = D81E680D10323DA800509B49 /* Plane.m */; };
+		D81E681710323DA800509B49 /* Vector2.m in Sources */ = {isa = PBXBuildFile; fileRef = D81E680F10323DA800509B49 /* Vector2.m */; };
+		D81E681810323DA800509B49 /* Vector3.m in Sources */ = {isa = PBXBuildFile; fileRef = D81E681110323DA800509B49 /* Vector3.m */; };
+		D81E681910323DA800509B49 /* Vector4.m in Sources */ = {isa = PBXBuildFile; fileRef = D81E681310323DA800509B49 /* Vector4.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -193,6 +201,22 @@
 		21638853103222E20008D39F /* wall.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = wall.png; sourceTree = "<group>"; };
 		28FD14FF0DC6FC520079059D /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
 		28FD15070DC6FC5B0079059D /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		D81E67FD10323D9000509B49 /* Component.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Component.h; sourceTree = "<group>"; };
+		D81E67FE10323D9000509B49 /* Component.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Component.m; sourceTree = "<group>"; };
+		D81E67FF10323D9000509B49 /* PositionComponent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PositionComponent.h; sourceTree = "<group>"; };
+		D81E680010323D9000509B49 /* PositionComponent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PositionComponent.m; sourceTree = "<group>"; };
+		D81E680810323DA800509B49 /* Frustum.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Frustum.h; sourceTree = "<group>"; };
+		D81E680910323DA800509B49 /* Frustum.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Frustum.m; sourceTree = "<group>"; };
+		D81E680A10323DA800509B49 /* Matrix.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Matrix.h; sourceTree = "<group>"; };
+		D81E680B10323DA800509B49 /* Matrix.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Matrix.m; sourceTree = "<group>"; };
+		D81E680C10323DA800509B49 /* Plane.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Plane.h; sourceTree = "<group>"; };
+		D81E680D10323DA800509B49 /* Plane.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Plane.m; sourceTree = "<group>"; };
+		D81E680E10323DA800509B49 /* Vector2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Vector2.h; sourceTree = "<group>"; };
+		D81E680F10323DA800509B49 /* Vector2.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Vector2.m; sourceTree = "<group>"; };
+		D81E681010323DA800509B49 /* Vector3.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Vector3.h; sourceTree = "<group>"; };
+		D81E681110323DA800509B49 /* Vector3.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Vector3.m; sourceTree = "<group>"; };
+		D81E681210323DA800509B49 /* Vector4.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Vector4.h; sourceTree = "<group>"; };
+		D81E681310323DA800509B49 /* Vector4.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Vector4.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -217,6 +241,7 @@
 		05AEA7431030949A007822B0 /* Source */ = {
 			isa = PBXGroup;
 			children = (
+				D81E680710323DA800509B49 /* Math */,
 				216383CA1031A5B80008D39F /* chipmunk */,
 				216383761031A5A70008D39F /* CPChipmunk */,
 				05AEA7441030949A007822B0 /* App */,
@@ -246,6 +271,7 @@
 		05AEA74A1030949A007822B0 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				D81E67FC10323D9000509B49 /* Components */,
 				216384181031A5E10008D39F /* Tank.h */,
 				216384191031A5E10008D39F /* Tank.m */,
 				216385BF1031C1590008D39F /* Level.h */,
@@ -454,6 +480,36 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		D81E67FC10323D9000509B49 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				D81E67FD10323D9000509B49 /* Component.h */,
+				D81E67FE10323D9000509B49 /* Component.m */,
+				D81E67FF10323D9000509B49 /* PositionComponent.h */,
+				D81E680010323D9000509B49 /* PositionComponent.m */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		D81E680710323DA800509B49 /* Math */ = {
+			isa = PBXGroup;
+			children = (
+				D81E680810323DA800509B49 /* Frustum.h */,
+				D81E680910323DA800509B49 /* Frustum.m */,
+				D81E680A10323DA800509B49 /* Matrix.h */,
+				D81E680B10323DA800509B49 /* Matrix.m */,
+				D81E680C10323DA800509B49 /* Plane.h */,
+				D81E680D10323DA800509B49 /* Plane.m */,
+				D81E680E10323DA800509B49 /* Vector2.h */,
+				D81E680F10323DA800509B49 /* Vector2.m */,
+				D81E681010323DA800509B49 /* Vector3.h */,
+				D81E681110323DA800509B49 /* Vector3.m */,
+				D81E681210323DA800509B49 /* Vector4.h */,
+				D81E681310323DA800509B49 /* Vector4.m */,
+			);
+			path = Math;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -563,6 +619,14 @@
 				216387701032186F0008D39F /* PhysicalObject.m in Sources */,
 				2163882A103220BF0008D39F /* Box.m in Sources */,
 				0504ACDA103239D700F0BCBB /* TCFakeAccelerometer.m in Sources */,
+				D81E680110323D9000509B49 /* Component.m in Sources */,
+				D81E680210323D9000509B49 /* PositionComponent.m in Sources */,
+				D81E681410323DA800509B49 /* Frustum.m in Sources */,
+				D81E681510323DA800509B49 /* Matrix.m in Sources */,
+				D81E681610323DA800509B49 /* Plane.m in Sources */,
+				D81E681710323DA800509B49 /* Vector2.m in Sources */,
+				D81E681810323DA800509B49 /* Vector3.m in Sources */,
+				D81E681910323DA800509B49 /* Vector4.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
